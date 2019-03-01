@@ -15,3 +15,4 @@ To run this project do the following:
 npm install
 npm run install:clean
 ```
+Use [this](https://demos.creative-tim.com/paper-dashboard-react/#/documentation/tutorial) as your reference for adding and removing components from the webpage 
