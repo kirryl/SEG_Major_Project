@@ -2,6 +2,7 @@ import Home from "views/Home/Home.jsx";
 import MyBuddy from "views/myBuddy/myBuddy.jsx";
 import UserPage from "views/UserPage/UserPage.jsx";
 import FAQ from "views/FAQ/FAQ.jsx";
+import Admin from "views/Admin/Admin.jsx";
 
 var dashRoutes = [
   {
@@ -23,6 +24,11 @@ var dashRoutes = [
     path: "/faq",
     name: "FAQs",
     component: FAQ
+  },
+  {
+    path: "/admin",
+    name: "Admin",
+    component: Admin
   },
 
   { redirect: true, path: "/", pathTo: "/home", name: "Home" }

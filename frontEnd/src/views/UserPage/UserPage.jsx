@@ -26,9 +26,8 @@ class User extends React.Component {
                   description="@chetfaker"
                 />
                 <p className="description text-center">
-                  "I like the way you work it{" "}<br/>
-                    No diggity <br/>
-                    I wanna bag it up"
+                  Second Year Computer Science Student{" "}<br/>
+                    Loves football and playing guitar <br/>
                 </p>
               </CardBody>
             </Card>
