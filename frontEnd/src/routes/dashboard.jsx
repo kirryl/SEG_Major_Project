@@ -3,6 +3,7 @@ import MyBuddy from "views/myBuddy/myBuddy.jsx";
 import UserPage from "views/UserPage/UserPage.jsx";
 import FAQ from "views/FAQ/FAQ.jsx";
 import Admin from "views/Admin/Admin.jsx";
+import SuperAdmin from "views/SuperAdmin/SuperAdmin.jsx";
 
 var dashRoutes = [
   {
@@ -29,6 +30,11 @@ var dashRoutes = [
     path: "/admin",
     name: "Admin",
     component: Admin
+  },
+  {
+    path: "/super-admin",
+    name: "Super Admin",
+    component: SuperAdmin
   },
 
   { redirect: true, path: "/", pathTo: "/home", name: "Home" }

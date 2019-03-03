@@ -14,11 +14,39 @@ class Admin extends React.Component {
         <Col md={6} xs={12}>
         <Card className="text-center">
           <CardBody>
-          <h5>Admin Responsibilities</h5>
+          <h5>Super Admin Responsibilities</h5>
             <p className="description text-center">
-            As an admin you are able to view all mentor-mentee pairings and manually assign students</p>
+            As a super admin you are able to view all mentor-mentee pairings, manually assign students and assign admins</p>
           </CardBody>
         </Card>
+        </Col>
+        <Col md={7} xs={20}>
+          <Card className="card-user">
+            <CardHeader>
+              <CardTitle>Assign Admin</CardTitle>
+            </CardHeader>
+            <CardBody>
+              <form>
+              <FormInputs
+              ncols = {["col-md-9 pr-1"]}
+              proprieties = {[
+                  {
+                      label : "Admin Email Address",
+                      inputProps : {
+                          type : "email",
+                          defaultValue: "example@kcl.ac.uk"
+                      }
+                  }
+              ]}
+          />
+                <Row>
+                  <div className="update ml-auto mr-auto">
+                    <Button color="primary" round>Confirm </Button>
+                  </div>
+                </Row>
+              </form>
+            </CardBody>
+          </Card>
         </Col>
         <Col md={7} xs={10}>
           <Card className="card-user">
@@ -101,5 +129,6 @@ class Admin extends React.Component {
   );
 }
 }
+
 
 export default Admin;
