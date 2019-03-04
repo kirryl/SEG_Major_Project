@@ -22,12 +22,11 @@ class User extends React.Component {
                 <CardAuthor
                   avatar={mike}
                   avatarAlt="..."
-                  title="Chet Faker"
-                  description="@chetfaker"
+                  title="John (Johnny) Doe"
+                  description="k1763918@kcl.ac.uk"
                 />
                 <p className="description text-center">
-                  Second Year Computer Science Student{" "}<br/>
-                    Loves football and playing guitar <br/>
+                  Nice to meet you!
                 </p>
               </CardBody>
             </Card>
@@ -40,49 +39,45 @@ class User extends React.Component {
               <CardBody>
                 <form>
                   <FormInputs
-                    ncols={["col-md-5 pr-1", "col-md-3 px-1", "col-md-4 pl-1"]}
+                    ncols={["col-md-5 pr-1"]}
                     proprieties={[
                       {
-                        label: "Company (disabled)",
-                        inputProps: {
-                          type: "text",
-                          disabled: true,
-                          defaultValue: "Creative Code Inc."
-                        }
-                      },
-                      {
-                        label: "Username",
-                        inputProps: {
-                          type: "text",
-                          defaultValue: "chetfaker"
-                        }
-                      },
-                      {
-                        label: "Email address",
+                        label: "Email Address",
                         inputProps: {
                           type: "email",
-                          placeholder: "Email"
+                          disabled: true,
+                          defaultValue: "k1763918@kcl.ac.uk"
                         }
-                      }
+                      },
                     ]}
                   />
                   <FormInputs
-                    ncols={["col-md-6 pr-1", "col-md-6 pl-1"]}
+                    ncols={["col-md-4 pr-1", "col-md-4 pr-1", "col-md-4 pl-1"]}
                     proprieties={[
                       {
                         label: "First Name",
                         inputProps: {
                           type: "text",
+                          disabled: true,
                           placeholder: "First Name",
-                          defaultValue: "Chet"
+                          defaultValue: "John"
+                        }
+                      },
+                      {
+                        label: "Nick Name",
+                        inputProps: {
+                          type: "text",
+                          placeholder: "Nick Name",
+                          defaultValue: "Johnny"
                         }
                       },
                       {
                         label: "Last Name",
                         inputProps: {
                           type: "text",
+                          disabled: true,
                           placeholder: "Last Name",
-                          defaultValue: "Faker"
+                          defaultValue: "Doe"
                         }
                       }
                     ]}
@@ -91,40 +86,38 @@ class User extends React.Component {
                     ncols={["col-md-12"]}
                     proprieties={[
                       {
-                        label: "Address",
+                        label: "My degree",
+                        inputProps: {
+                          type: "Text",
+                          defaultValue: "BSc Computer Science with a year abroad"
+                        }
+                      },
+                    ]}
+                  />                  
+                  <FormInputs
+                    ncols={["col-md-12"]}
+                    proprieties={[
+                      {
+                        label: "UK Address",
                         inputProps: {
                           type: "text",
                           placeholder: "Home Address",
                           defaultValue:
-                            "Melbourne, Australia"
+                            "Stratford One, London"
                         }
                       }
                     ]}
                   />
                   <FormInputs
-                    ncols={["col-md-4 pr-1", "col-md-4 px-1", "col-md-4 pl-1"]}
+                    ncols={["col-md-12"]}
                     proprieties={[
                       {
-                        label: "City",
+                        label: "Home Address",
                         inputProps: {
                           type: "text",
-                          defaultValue: "Melbourne",
-                          placeholder: "City"
-                        }
-                      },
-                      {
-                        label: "Country",
-                        inputProps: {
-                          type: "text",
-                          defaultValue: "Australia",
-                          placeholder: "Country"
-                        }
-                      },
-                      {
-                        label: "Postal Code",
-                        inputProps: {
-                          type: "number",
-                          placeholder: "ZIP Code"
+                          placeholder: "Home Address",
+                          defaultValue:
+                            "Melbourne, Australia"
                         }
                       }
                     ]}
@@ -137,12 +130,40 @@ class User extends React.Component {
                         inputProps: {
                           type: "textarea",
                           defaultValue:
-                            "Oh so, your weak rhyme You doubt I'll bother, reading into it",
+                            "Nice to meet you!",
                           placeholder: "Here can be your description"
                         }
                       }
                     ]}
                   />
+                  <FormInputs
+                    ncols={["col-md-12"]}
+                    proprieties={[
+                      {
+                        label: "My Current Modules",
+                        inputProps: {
+                          type: "textarea",
+                          defaultValue:
+                            "Software Engineering Group Project (SEG), Programming Language Paradigms (PLD), Introduction to Artificial Intelligence (INT), Operating System and Concurrency (OSC)",
+                          placeholder: "Here can be your description"
+                        }
+                      }
+                    ]}
+                  />
+                  <FormInputs
+                    ncols={["col-md-12"]}
+                    proprieties={[
+                      {
+                        label: "My Society",
+                        inputProps: {
+                          type: "textarea",
+                          defaultValue:
+                            "KCL Australian Society, KCL Rugby Society",
+                          placeholder: "Here can be your description"
+                        }
+                      }
+                    ]}
+                  />                  
                   <Row>
                     <div className="update ml-auto mr-auto">
                       <Button color="primary" round>Update Profile</Button>

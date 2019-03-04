@@ -11,7 +11,7 @@ class Admin extends React.Component {
     return (
       <div className="content">
       <Row>
-        <Col md={6} xs={12}>
+        <Col md={10} xs={12}>
         <Card className="text-center">
           <CardBody>
           <h5>Admin Responsibilities</h5>
@@ -20,7 +20,7 @@ class Admin extends React.Component {
           </CardBody>
         </Card>
         </Col>
-        <Col md={7} xs={10}>
+        <Col md={10} xs={10}>
           <Card className="card-user">
             <CardHeader>
               <CardTitle>Manually Assign Mentor with Mentee</CardTitle>
@@ -55,7 +55,7 @@ class Admin extends React.Component {
             </CardBody>
           </Card>
         </Col>
-        <Col xs={12}>
+        <Col xs={10}>
             <Card>
               <CardHeader>
                 <CardTitle tag="h4">2020 Mentor-Mentee</CardTitle>
