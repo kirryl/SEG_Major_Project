@@ -15,10 +15,7 @@ class Footer extends React.Component {
             <nav className="footer-nav">
               <ul>
                 <li>
-                  <a href="" target="_blank">Link 1</a>
-                </li>
-                <li>
-                  <a href="" target="_blank">Link 2</a>
+                  <a href="https://keats.kcl.ac.uk/my/" target="_blank">KEATS</a>
                 </li>
                 <li>
                   <a href="https://www.creative-tim.com/license" target="_blank">Licenses</a>
@@ -36,7 +33,6 @@ class Footer extends React.Component {
     );
   }
 }
-
 Footer.propTypes = {
   default: PropTypes.bool,
   fluid: PropTypes.bool
