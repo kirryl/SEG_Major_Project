@@ -164,13 +164,13 @@ class Admin extends React.Component {
                 <tbody>
                   <tr>
                     <td>
-                      Dakota Rice
+                    Mason Porter
                     </td>
                     <td>
                       example@kcl.ac.uk
                     </td>
                     <td>
-                      Freshers
+                      Fresher - Sixth Form
                     </td>
                     <td>
                       
@@ -181,13 +181,13 @@ class Admin extends React.Component {
                   </tr>
                   <tr>
                     <td>
-                      Dakota Rice
+                    Mason Porter
                     </td>
                     <td>
                       example@kcl.ac.uk
                     </td>
                     <td>
-                      Freshers
+                    Fresher - Sixth Form
                     </td>
                     <td>
                       
@@ -198,13 +198,13 @@ class Admin extends React.Component {
                   </tr>
                   <tr>
                     <td>
-                      Dakota Rice
+                    Mason Porter
                     </td>
                     <td>
                       example@kcl.ac.uk
                     </td>
                     <td>
-                      Freshers
+                    Fresher - Sixth Form
                     </td>
                     <td>
                       
