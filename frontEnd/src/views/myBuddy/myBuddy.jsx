@@ -14,21 +14,124 @@ class myBuddy extends React.Component {
   render() {
     return (
       <div className="content">
-        <NotificationAlert ref="notificationAlert" />
         <Row>
-          <Col md={10}>
-            <Card>
+        <Col md={12} xs={12}>
+            <Card className="card-user">
               <CardHeader>
-                <CardTitle>Hello Johnny!</CardTitle>
-                <p className="card-category">
-                your buddy is ...
-                </p>
+                <CardTitle>Buddy details</CardTitle>
               </CardHeader>
+              <CardBody>
+                <form>
+                  <FormInputs
+                    ncols={["col-md-5 pr-1"]}
+                    proprieties={[
+                      {
+                        label: "Email Address",
+                        inputProps: {
+                          type: "email",
+                          disabled: true,
+                          defaultValue: "k1768912@kcl.ac.uk"
+                        }
+                      },
+                    ]}
+                  />
+                  <FormInputs
+                    ncols={["col-md-4 pr-1", "col-md-4 pr-1", "col-md-4 pl-1"]}
+                    proprieties={[
+                      {
+                        label: "First Name",
+                        inputProps: {
+                          type: "text",
+                          disabled: true,
+                          placeholder: "First Name",
+                          defaultValue: "Caoimhe"
+                        }
+                      },
+                      {
+                        label: "Nick Name",
+                        inputProps: {
+                          type: "text",
+                          disabled: true,
+                          placeholder: "Nick Name",
+                          defaultValue: "Cat"
+                        }
+                      },
+                      {
+                        label: "Last Name",
+                        inputProps: {
+                          type: "text",
+                          disabled: true,
+                          placeholder: "Last Name",
+                          defaultValue: "Byrne"
+                        }
+                      }
+                    ]}
+                  />
+                  <FormInputs
+                    ncols={["col-md-12"]}
+                    proprieties={[
+                      {
+                        label: "My Buddie's degree",
+                        inputProps: {
+                          type: "Text",
+                          disabled: true,
+                          defaultValue: "Msc Computer Science"
+                        }
+                      },
+                    ]}
+                  />                  
+                  <FormInputs
+                    ncols={["col-md-12"]}
+                    proprieties={[
+                      {
+                        label: "About My Buddy",
+                        inputProps: {
+                          type: "textarea",
+                          disabled: true,
+                          defaultValue:
+                            "Nice to meet you!",
+                          placeholder: "Here can be your description"
+                        }
+                      }
+                    ]}
+                  />
+                  <FormInputs
+                    ncols={["col-md-12"]}
+                    proprieties={[
+                      {
+                        label: "Current Modules",
+                        inputProps: {
+                          type: "textarea",
+                          disabled: true,
+                          defaultValue:
+                            "SEG, OSC, PLD, INT",
+                          placeholder: "Here can be your description"
+                        }
+                      }
+                    ]}
+                  />
+                  <FormInputs
+                    ncols={["col-md-12"]}
+                    proprieties={[
+                      {
+                        label: "Societies joined",
+                        inputProps: {
+                          type: "textarea",
+                          disabled: true,
+                          defaultValue:
+                            "KCL Tiddlywinks Society",
+                          placeholder: "Here can be your description"
+                        }
+                      }
+                    ]}
+                  />                  
+                </form>
+              </CardBody>
             </Card>
           </Col>
-        </Row>
+          </Row>
         <Row>
-          <Col md={10} xs={12}>
+          <Col md={12} xs={12}>
             <Card className="card-user">
               <CardHeader>
                 <CardTitle>Report My Buddy</CardTitle>
