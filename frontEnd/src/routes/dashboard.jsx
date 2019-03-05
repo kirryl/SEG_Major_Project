@@ -4,7 +4,7 @@ import UserPage from "views/UserPage/UserPage.jsx";
 import FAQ from "views/FAQ/FAQ.jsx";
 import Admin from "views/Admin/Admin.jsx";
 import SuperAdmin from "views/SuperAdmin/SuperAdmin.jsx";
-import MenteeForm from "views/MenteeForm/MenteeForm.jsx";
+import RegisterForm from "views/RegisterForm/RegisterForm.jsx";
 
 var dashRoutes = [
   {
@@ -38,9 +38,9 @@ var dashRoutes = [
     component: SuperAdmin
   },
   {
-    path: "/menteeForm",
+    path: "/RegisterForm",
     name: "redirect form after sign up confirmation",
-    component: MenteeForm
+    component: RegisterForm
   },
 
   { redirect: true, path: "/", pathTo: "/home", name: "Home" }

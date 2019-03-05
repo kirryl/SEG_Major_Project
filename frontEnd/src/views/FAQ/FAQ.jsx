@@ -25,13 +25,13 @@ class FAQ extends React.Component {
     return (
       <div className="content">
         <NotificationAlert ref="notificationAlert" />
+        <CardBody>
+              <h4 className="title">Frequently Asked Questions - Got a question? Check out our FAQs below.</h4>
+        </CardBody>
         <Row>
           <Col md={12}>
           {/*individual cards for each faq*/}
             <Card>
-              <CardHeader>
-                <CardTitle>Frequently Asked Questions - Got a question? Check out our FAQs below.</CardTitle>
-              </CardHeader>
             </Card>
             <Col md={10} xs={12}>
             <Card className="text-left">
@@ -109,6 +109,4 @@ class FAQ extends React.Component {
     );
   }
 }
-
-
 export default FAQ;

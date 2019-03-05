@@ -20,7 +20,7 @@ class Home extends React.Component {
       <div className="content">
 
               <CardBody>
-              <h1 className="title">King's College London Student Buddy System</h1>
+              <h2 className="title">King's College London Student Buddy System</h2>
               </CardBody>
 
               <Row>
@@ -60,13 +60,19 @@ class Home extends React.Component {
           {/*<h1>Sign in if you are already registered</h1>
 
           <Button color="primary">Sign In</Button>*/}
-          <h1>Register below to join</h1>
+          <h4>Register</h4>
           <form>
           <Row>
       <Col>
       <FormGroup>
         <Label for="firstName">First Name</Label>
         <Input type="text" placeholder="First name" />
+      </FormGroup>
+      </Col>
+      <Col>
+      <FormGroup>
+        <Label for="preferredName">Preferred Name</Label>
+        <Input type="text" placeholder="Preferred name" />
       </FormGroup>
       </Col>
       <Col>
@@ -79,7 +85,7 @@ class Home extends React.Component {
 
             <FormGroup>
               <Label for="inputAddress">Email Address</Label>
-              <Input type="text"  id="inputAddress" placeholder="user@kcl.ac.uk"/>
+              <Input type="email"  id="inputAddress" placeholder="user@kcl.ac.uk"/>
             </FormGroup>
             {/*button does nothing currently*/}
             <Button type="submit" color="primary">Sign Up</Button>
