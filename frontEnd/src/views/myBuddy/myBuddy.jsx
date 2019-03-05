@@ -48,11 +48,11 @@ class myBuddy extends React.Component {
                         }
                       },
                       {
-                        label: "Nick Name",
+                        label: "Preferred Name",
                         inputProps: {
                           type: "text",
                           disabled: true,
-                          placeholder: "Nick Name",
+                          placeholder: "Preferred Name",
                           defaultValue: "Cat"
                         }
                       },
@@ -71,7 +71,7 @@ class myBuddy extends React.Component {
                     ncols={["col-md-12"]}
                     proprieties={[
                       {
-                        label: "My Buddie's degree",
+                        label: "My Buddy's degree",
                         inputProps: {
                           type: "Text",
                           disabled: true,

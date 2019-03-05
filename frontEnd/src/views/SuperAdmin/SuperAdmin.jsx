@@ -88,6 +88,169 @@ class Admin extends React.Component {
         <Col xs={10}>
             <Card>
               <CardHeader>
+                <CardTitle tag="h4">Students to be assigned</CardTitle>
+              </CardHeader>
+              <CardBody>
+              <Table responsive>
+                <thead className=" text-primary">
+                  <th>
+                    Name
+                  </th>
+                  <th>
+                    Email
+                  </th>
+                  <th>
+                    Status
+                  </th>
+                  <th className="text-right">
+                    Interests
+                  </th>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      Dakota Rice
+                    </td>
+                    <td>
+                      example@kcl.ac.uk
+                    </td>
+                    <td>
+                      Mentor
+                    </td>
+                    <td className="text-right">
+                      
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Minerva Hooper
+                    </td>
+                    <td>
+                      example@kcl.ac.uk
+                    </td>
+                    <td>
+                      Mentor
+                    </td>
+                    <td className="text-right">
+                      
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Sage Rodriguez
+                    </td>
+                    <td>
+                      example@kcl.ac.uk
+                    </td>
+                    <td>
+                      Mentee
+                    </td>
+                    <td className="text-right">
+                      
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Philip Chaney
+                    </td>
+                    <td>
+                      example@kcl.ac.uk
+                    </td>
+                    <td>
+                      Mentor
+                    </td>
+                    <td className="text-right">
+                    </td>
+                  </tr>
+                </tbody>
+              </Table>
+              </CardBody>
+            </Card>
+          </Col>
+          <Col xs={10}>
+            <Card>
+              <CardHeader>
+                <CardTitle tag="h4">Students to be verified</CardTitle>
+              </CardHeader>
+              <CardBody>
+              <Table responsive>
+                <thead className=" text-primary">
+                  <th>
+                    Name
+                  </th>
+                  <th>
+                    Email
+                  </th>
+                  <th>
+                    Status
+                  </th>
+                  <th>
+                    Interests
+                  </th>
+                  <th>
+                    Proof
+                  </th>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      Dakota Rice
+                    </td>
+                    <td>
+                      example@kcl.ac.uk
+                    </td>
+                    <td>
+                      Fresher - Sixth Form
+                    </td>
+                    <td>
+                      
+                    </td>
+                    <td>
+                      Yes
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Dakota Rice
+                    </td>
+                    <td>
+                      example@kcl.ac.uk
+                    </td>
+                    <td>
+                    Fresher - Sixth Form
+                    </td>
+                    <td>
+                      
+                    </td>
+                    <td>
+                      No
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Dakota Rice
+                    </td>
+                    <td>
+                      example@kcl.ac.uk
+                    </td>
+                    <td>
+                    Fresher - Sixth Form
+                    </td>
+                    <td>
+                      
+                    </td>
+                    <td>
+                      Yes
+                    </td>
+                  </tr>
+                </tbody>
+              </Table>
+              </CardBody>
+            </Card>
+          </Col>
+        <Col xs={10}>
+            <Card>
+              <CardHeader>
                 <CardTitle tag="h4">2020 Mentor-Mentee</CardTitle>
               </CardHeader>
               <CardBody>

@@ -31,7 +31,7 @@ class Home extends React.Component {
               </Card>
               </Col>
 
-              <Col md={7} xs={12}>
+              <Col md={5} xs={12}>
               <Card>
                 <CardBody>
                     <CardTitle>Welcome</CardTitle>
@@ -54,7 +54,7 @@ class Home extends React.Component {
         </Card>
       </Col>*/}
 
-      <Col md={5} xs={12}>
+      <Col md={7} xs={12}>
         <Card className="text-center">
           <CardBody>
           {/*<h1>Sign in if you are already registered</h1>
@@ -71,22 +71,23 @@ class Home extends React.Component {
       </Col>
       <Col>
       <FormGroup>
-        <Label for="preferredName">Preferred Name</Label>
-        <Input type="text" placeholder="Preferred name" />
-      </FormGroup>
-      </Col>
-      <Col>
-      <FormGroup>
         <Label for="lastName">Last Name</Label>
         <Input type="text" placeholder="Last name" />
       </FormGroup>
       </Col>
     </Row>
-
+    <Col>
+      <FormGroup>
+        <Label for="preferredName">Preferred Name</Label>
+        <Input type="text" placeholder="Preferred name" />
+      </FormGroup>
+      </Col>
+      <Col>
             <FormGroup>
               <Label for="inputAddress">Email Address</Label>
               <Input type="email"  id="inputAddress" placeholder="user@kcl.ac.uk"/>
             </FormGroup>
+            </Col>
             {/*button does nothing currently*/}
             <Button type="submit" color="primary">Sign Up</Button>
           </form>

@@ -64,10 +64,10 @@ class User extends React.Component {
                         }
                       },
                       {
-                        label: "Nick Name",
+                        label: "Preferred Name",
                         inputProps: {
                           type: "text",
-                          placeholder: "Nick Name",
+                          placeholder: "Preferred Name",
                           defaultValue: "Johnny"
                         }
                       },
