@@ -1,8 +1,7 @@
-<<<<<<< HEAD
 # MyBuddy WebApp by Team //no comment 
 ###### Members: (Mansour Jalaly, Luke Head, Sanchit (Bambi) Bembi, Diogo (Diogo) Ferreira Ramos, Rory Hawthorne, Mananchaya (Mai) Khumtai, Ronnie (ro'mie) Kiyegga, Emily Liu, Kirryl Tarunin)
 
-## Getting Ready
+## Getting Ready (Frontend)
 To clone this project onto your local drive do the following:
 ```
 git init
@@ -17,8 +16,8 @@ npm install
 npm run install:clean
 ```
 Use [this](https://demos.creative-tim.com/paper-dashboard-react/#/documentation/tutorial) as your reference for adding and removing components from the webpage 
-=======
-# SEG_Major_Project
+
+# Backend
 
 To install the react-flask boilerplate and start working on it, follow the steps provided below. 
 
@@ -57,4 +56,4 @@ To install the react-flask boilerplate and start working on it, follow the steps
   - Check if its in the right directory with the following `which python` should return with `(yourshiz)/env/bin/python`
 7. Run the command ```sh run.sh```
 8. Visit the specified port and you'll see the boilerplate code. 
->>>>>>> backend_bambi
+
