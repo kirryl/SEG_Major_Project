@@ -158,8 +158,10 @@ class RegisterForm extends React.Component {
                     <Label for="inputState">Year of Study</Label>
                     <Input type="select" name="select" id="inputState" >
                     <option>Choose...</option>
-                    <option>1st</option>
-                    <option>2nd/3rd/4th</option>
+                    <option>First</option>
+                    <option>Second</option>
+                    <option>Third</option>
+                    <option>Fourth</option>
                     </Input>
                 </FormGroup>
 
