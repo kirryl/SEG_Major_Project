@@ -6,7 +6,6 @@ CREATE TABLE STUDENTS (
 	Student_Forename VARCHAR(20),
 	Student_Surname VARCHAR(20),
 	KCL_Email VARCHAR(30) NOT NULL,
-	Student_Interests  VARCHAR(30),
 	Issues VARCHAR(30),
 	Verified TINYINT(1),
 	PRIMARY KEY(StudentID)
@@ -17,7 +16,6 @@ CREATE TABLE MENTORS (
 	Mentor_Forename VARCHAR(20),
 	Mentor_Surname VARCHAR(20),
 	KCL_Email VARCHAR(30) NOT NULL,
-	Mentor_Interests VARCHAR(30),
 	Skills VARCHAR(30),
 	PRIMARY KEY(MentorID)
 );
