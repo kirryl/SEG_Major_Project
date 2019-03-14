@@ -6,22 +6,6 @@ INSERT INTO MENTORS (MentorID, Mentor_Forename, Mentor_Surname, KCL_Email, Skill
 	("0","Kirryl","Tarunin","kirryl.tarunin@kcl.ac.uk",""),
 	("1","Kevin","Vasquez","kevin.vasquez@kcl.ac.uk","");
 	
-INSERT INTO STUDENT_INTERESTS (StudentID, InterestTitle) VALUES
-	("0","Ice skating"),
-	("0","Football"),
-	("1","Boxing"),
-	("1","Athletics");
-
-INSERT INTO MENTORS_INTERESTS (MentorID, InterestTitle) VALUES
-	("0","Chess"),
-	("0","Boxing"),
-	("1","Martial arts"),
-	("1","Ice skating");
-	
-/* INSERT INTO MENTOR_STUDENT_PAIR () VALUES
-	(),
-	(); */	
-	
 INSERT INTO INTERESTS (InterestTitle) VALUES
 	("Athletics"),
 	("Chess"),
@@ -32,8 +16,25 @@ INSERT INTO INTERESTS (InterestTitle) VALUES
 	("Ice skating"),
 	("Hockey"),
 	("Football"),
-	("Rugby");		
+	("Rugby");			
 	
+INSERT INTO STUDENT_INTERESTS (StudentID, InterestTitle) VALUES
+	("0","Ice skating"),
+	("0","Football"),
+	("1","Boxing"),
+	("1","Athletics");
+
+INSERT INTO MENTOR_INTERESTS (MentorID, InterestTitle) VALUES
+	("0","Chess"),
+	("0","Boxing"),
+	("1","Martial arts"),
+	("1","Ice skating");
+	
+/* INSERT INTO MENTOR_STUDENT_PAIR () VALUES
+	(),
+	(); */	
+	
+
 INSERT INTO SIMILAR_INTERESTS (firstInterest, secondInterest) VALUES
 	("Boxing","Martial arts"),
 	("Ice Hockey","Ice skating"),
