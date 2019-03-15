@@ -2,8 +2,6 @@
 import React from "react";
 import { Card, CardHeader, CardBody, CardTitle, Row, Col, Table } from "reactstrap";
 
-import Button from "components/CustomButton/CustomButton.jsx";
-import FormInputs from "components/FormInputs/FormInputs.jsx"
 import { thead, tbody } from "variables/adminTable";
 
 class CurrentStudents extends React.Component {
