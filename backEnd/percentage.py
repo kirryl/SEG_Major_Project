@@ -34,9 +34,9 @@ j = 0
 
 while i < len(studentList):
 	while j < len(mentorList):
-	
-	j+=1
-i += 1
+		
+		j+=1
+	i += 1
 
 
 
