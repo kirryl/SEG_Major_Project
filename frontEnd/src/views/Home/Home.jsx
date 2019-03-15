@@ -4,12 +4,8 @@ import {
   CardBody,
   CardTitle,
   CardText,
-  CardImg,
   Row,
-  Col,
-  FormGroup,
-  Label,
-  Input
+  Col
 } from "reactstrap";
 
 import Button from "components/CustomButton/CustomButton.jsx";
@@ -25,15 +21,18 @@ class Home extends React.Component {
 
               <Row>
 
-              <Col md={9} xs={12}>
+              <Col md={9} xs={20}>
               <Card className="text-center">
                 <CardBody>
                     <CardTitle>Welcome</CardTitle>
                     <CardText>The student buddy scheme is an informal support scheme to help students in the department network across all different years.
 
-                    It has been designed for the use of King's College London students.</CardText>
+                    It has been designed for the use of King's College London students.
+                    For non-KCL student, student who has yet have a KCL email please sign-up through freshers button.
+                    
+                    </CardText>
                     {/* Add link to FAQ page */}
-                    <a href="#link" class="btn btn-info" role="button">Learn More</a>
+
                 </CardBody>
                 </Card>
                 </Col>
