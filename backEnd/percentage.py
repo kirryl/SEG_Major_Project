@@ -30,18 +30,22 @@ while mentorIds is not None:
 mentorCursor.close()
 
 i = 0
+interestsCount =[]
+interestsName = []
 
 while i < len(studentList):
 	j = 0
 	while j < len(mentorList):
 		interestsCursor = mydb.cursor()
-		interestsCursor.execute("SELECT InterestTitle FROM STUDENT_INTERESTS NATURAL JOIN MENTOR_INTERESTS WHERE StudentID="+str(i)+" AND MentorID="+str(j)+" AND STUDENT_INTERESTS.InterestTitle = MENTOR_INTERESTS.InterestTitle")
-		print(interestsCursor.fetchall())
+		interestsCursor.execute("SELECT InterestTitle FROM STUDENT_INTERESTS NATURAL JOIN MENTOR_INTERESTS WHERE StudentID="+str(i)+" AND MentorID="+str(j)+" AND STUDENT_INTERESTS.InterestTitle = MENTOR_INTERESTS.InterestTitle")		
+		interestsName.append(interestsCursor.fetchall())
+		#interestsCount.append(len(interestsCursor.fetchall()))
 		interestsCursor.close()
 		j = j + 1
 	i = i + 1
 
 
+print(interestsName)
 
 
 
@@ -68,3 +72,7 @@ try:
 		cursor.execute("SELECT * FROM STUDENTS;")
 finally:
 	connection.close()
+
+	
+	
+#interestsCursor.execute("SELECT STUDENT_INTERESTS.InterestTitle FROM STUDENT_INTERESTS INNER JOIN MENTOR_INTERESTS ON StudentID="+str(i)+" AND MentorID="+str(j)+" AND STUDENT_INTERESTS.InterestTitle = MENTOR_INTERESTS.InterestTitle")
