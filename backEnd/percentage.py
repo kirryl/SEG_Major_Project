@@ -30,13 +30,16 @@ while mentorIds is not None:
 mentorCursor.close()
 
 i = 0
-j = 0
 
 while i < len(studentList):
+	j = 0
 	while j < len(mentorList):
-		
-		j+=1
-	i += 1
+		interestsCursor = mydb.cursor()
+		interestsCursor.execute("SELECT InterestTitle FROM STUDENT_INTERESTS NATURAL JOIN MENTOR_INTERESTS WHERE StudentID="+str(i)+" AND MentorID="+str(j)+" AND STUDENT_INTERESTS.InterestTitle = MENTOR_INTERESTS.InterestTitle")
+		print(interestsCursor.fetchall())
+		interestsCursor.close()
+		j = j + 1
+	i = i + 1
 
 
 
