@@ -31,17 +31,40 @@ mentorCursor.close()
 
 i = 0
 interestsCount =[]
-interestsName = []
+studentMentorPercentile = [][]
 
 while i < len(studentList):
 	j = 0
+	
 	while j < len(mentorList):
+		interestsName = []
 		interestsCursor = mydb.cursor()
 		interestsCursor.execute("SELECT InterestTitle FROM STUDENT_INTERESTS NATURAL JOIN MENTOR_INTERESTS WHERE StudentID="+str(i)+" AND MentorID="+str(j)+" AND STUDENT_INTERESTS.InterestTitle = MENTOR_INTERESTS.InterestTitle")		
 		interestsName.append(interestsCursor.fetchall())
+		matchingInterests = len(interestsCursor.fetchall())
 		#interestsCount.append(len(interestsCursor.fetchall()))
 		interestsCursor.close()
+		
+		interestsName = []
+		interestsCursor = mydb.cursor()
+		interestsCursor.execute("SELECT firstInterest AND secondInterest FROM STUDENT_INTERESTS NATURAL JOIN MENTOR_INTERESTS WHERE StudentID="+str(i)+" AND MentorID="+str(j)+" AND STUDENT_INTERESTS.InterestTitle = MENTOR_INTERESTS.InterestTitle")		
+		interestsName.append(interestsCursor.fetchall())
+		similarInterests = len(interestsCursor.fetchall())
+		#interestsCount.append(len(interestsCursor.fetchall()))
+		interestsCursor.close()
+		
+		interestsName = []
+		interestsCursor = mydb.cursor()
+		interestsCursor.execute("SELECT InterestTitle FROM STUDENT_INTERESTS NATURAL JOIN MENTOR_INTERESTS WHERE StudentID="+str(i)+" AND MentorID="+str(j)+" AND STUDENT_INTERESTS.InterestTitle = MENTOR_INTERESTS.InterestTitle")		
+		interestsName.append(interestsCursor.fetchall())
+		totalInterests = len(interestsCursor.fetchall())
+		#interestsCount.append(len(interestsCursor.fetchall()))
+		interestsCursor.close()
+		
+		studentMentorPercentile[i][j] = 100*(matchingInterests+similarInterests)/totalInterests
+		
 		j = j + 1
+	
 	i = i + 1
 
 
