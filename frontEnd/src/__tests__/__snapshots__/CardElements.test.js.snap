@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CardAuthor /> renders correctly 1`] = `
+<div
+  className="author"
+>
+  <a
+    href="#"
+  >
+    <img
+      className="avatar border-gray"
+    />
+    <h5
+      className="title"
+    />
+  </a>
+  <p
+    className="description"
+  />
+</div>
+`;
+
+exports[`<CardAuthor /> should render correctly 1`] = `
+<div
+  className="author"
+>
+  <a
+    href="#"
+  >
+    <img
+      className="avatar border-gray"
+    />
+    <h5
+      className="title"
+    />
+  </a>
+  <p
+    className="description"
+  />
+</div>
+`;
