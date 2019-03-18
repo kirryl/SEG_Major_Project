@@ -1,4 +1,4 @@
-from stablemarriage.py import *
+from stablemarriage.py as sm
 from nltk.stem import SnowballStemmer
 import copy
 import random, string
@@ -75,10 +75,33 @@ def apply(input):
 
 
     group_difference = len(mentor_scoring_list) - len(mentee_scoring_list)
+    set_aside = []
     if group_difference == 0.0:
         stable_marriage_input = {
             "optimal" : mentor_scoring_list,
             "pessimal" : mentee_scoring_list
         }
     else:
-        print("Group Differences to be sorted out")
+        if group_difference > 0:
+            for i in range(group_difference):
+                null_mentee = randomword(20)
+                set_aside.append(null_mentee)
+                mentee_scoring_list[null_mentee] = []
+                for mentor in mentor_scoring_list:
+                    mentor_scoring_list[mentor].append(null_mentee)
+                    mentee_scoring_list[null_mentee].append(mentor)
+        elif group_difference < 0:
+            for i in range(group_difference):
+                null_mentor = randomword(20)
+                set_aside.append(null_mentor)
+                mentor_scoring_list[null_mentor] = []
+                for mentee in mentee_scoring_list:
+                    mentee_scoring_list[mentee].append(null_mentor)
+                    mentor_scoring_list[null_mentor].append(mentee)
+
+        stable_marriage_input = {
+        "optimal" : mentor_scoring_list,
+        "pessimal" : mentee_scoring_list
+        }
+
+    stable_marriages = sm.pipe(stable_marriage_input).result(matches)
