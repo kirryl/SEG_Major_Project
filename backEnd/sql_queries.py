@@ -5,11 +5,101 @@ def connectDB():
     mydb = mysql.connector.connect(host="localhost",user="root",password="",database='myBuddyDb')
 
 
+
+def updateStudentVerified(studentID):
+	connectDB()
+    cursor = mydb.cursor()
+	cursor.execute("UPDATE STUDENTS SET Verified=1 WHERE StudentID="+str(studentID)+";")
+	cursor.close()	
+	
+	
 def showStudentsTable():
     connectDB()
     studentCursor = mydb.cursor()
-    studentCursor.execute("SELECT * FROM STUDENTS;")
+    studentCursor.execute("SELECT Student_Forename, Student_Surname, KCL_Email, Issues, Verified FROM STUDENTS;")	
+	studentIds = studentCursor.fetchone()
+	studentList = []
+	while studentIds is not None:
+		studentList.append(studentIds[0])
+		studentIds = studentCursor.fetchone()
+	
+	print(studentList)	
+	studentCursor.close()
+	
+
+def showMentorsTable():
+	connectDB()
+    mentorCursor = mydb.cursor()
+    mentorCursor.execute("SELECT Mentor_Forename, Mentor_Surname, KCL_Email, Skills FROM MENTORS;")	
+	mentorIds = mentorCursor.fetchone()
+	mentorList = []
+	while mentorIds is not None:
+		mentorList.append(mentorIds[0])
+		mentorIds = mentorCursor.fetchone()
+	
+	print(mentorList)	
+	mentorCursor.close()
+	
+def showAssignedStudents(mentorID):
+	connectDB()
+	cursor = mydb.cursor()
+	cursor.execute("SELECT STUDENTS.StudentID, STUDENTS.Student_Forename, STUDENTS.Student_Surname FROM STUDENTS NATURAL JOIN MENTOR_STUDENT_PAIR WHERE MentorID"+mentorID+";")
+	cursor.close()
+	
     
+def showSingularStudentInformation(studentID):
+	connectDB()
+	cursor = mydb.cursor()
+	cursor.execute("SELECT Student_Forename, Student_Surname, KCL_Email, Issues, Verified FROM STUDENTS WHERE StudentID="+studentID+";")
+	cursor.close()
+	
+
+def showSingularMentorInformation(mentorID):
+	connectDB()
+	cursor = mydb.cursor()
+	cursor.execute("SELECT Mentor_Forename, Mentor_Surname, KCL_Email, Skills FROM MENTORS WHERE MentorID="+mentorID+";")
+	cursor.close()
+	
+
+def insertStudentMentorPair(studentID, mentorID, score):
+	connectDB()
+	cursor = mydb.cursor()
+	cursor.execute("INSERT INTO MENTOR_STUDENT_PAIR (MentorID, StudentID, Compatibility) VALUES ("+studentID+", "+mentorID+", "+str(score)+");"
+	cursor.close()
+	
+def deleteStudentMentorPair(studentID):
+	connectDB()
+	cursor = mydb.cursor()
+	cursor.execute("DELETE FROM MENTOR_STUDENT_PAIR WHERE StudentID="+studentID+");"
+	cursor.close()
+
+	
+def insertAdmin(adminID, email):
+	connectDB()
+	cursor = mydb.cursor()
+	cursor.execute("INSERT INTO ADMINS (AdminID, KCL_Email) VALUES ("+adminID+", "+email+");"
+	cursor.close()
+	
+
+def insertSuperAdmin(adminID):
+	connectDB()
+	cursor = mydb.cursor()
+	cursor.execute("INSERT INTO SUPER_ADMINS (AdminID) VALUES ("+adminID+");"
+	cursor.close()
+	
+def deleteStudent(studentID):
+	connectDB()
+	cursor = mydb.cursor()
+	cursor.execute("DELETE FROM STUDENTS WHERE StudentID="+studentID+");"
+	cursor.close()
+
+
+def deleteMentor(mentorID):
+	connectDB()
+	cursor = mydb.cursor()
+	cursor.execute("DELETE FROM MENTORS WHERE MentorID="+mentorID+");"
+	cursor.close()
+	
 
 
 studentCursor = mydb.cursor()
