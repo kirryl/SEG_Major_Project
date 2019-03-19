@@ -15,29 +15,29 @@ class Home extends React.Component {
     return (
       <div className="content">
 
-              <CardBody>
-              <h2 className="title">King's College London Student Buddy System</h2>
-              </CardBody>
+    <CardBody>
+    <h2 className="title">King's College London Student Buddy System</h2>
+    </CardBody>
 
-              <Row>
+    <Row>
 
-              <Col md={9} xs={20}>
-              <Card className="text-center">
-                <CardBody>
-                    <CardTitle>Welcome</CardTitle>
-                    <CardText>The student buddy scheme is an informal support scheme to help students in the department network across all different years.
+    <Col md={9} xs={20}>
+    <Card className="text-center">
+      <CardBody>
+          <CardTitle>Welcome</CardTitle>
+          <CardText>The student buddy scheme is an informal support scheme to help students in the department network across all different years.
 
-                    It has been designed for the use of King's College London students.
-                    For non-KCL student, student who has yet have a KCL email please sign-up through freshers button.
-                    
-                    </CardText>
-                    {/* Add link to FAQ page */}
+          It has been designed for the use of King's College London students.
+          For non-KCL student, student who has yet have a KCL email please sign-up through freshers button.
+          
+          </CardText>
+          {/* Add link to FAQ page */}
 
-                </CardBody>
-                </Card>
-                </Col>
-                </Row>
-                <Row>
+      </CardBody>
+      </Card>
+      </Col>
+      </Row>
+      <Row>
 
       <Col md={3} xs={5}>
         <Card className="text-center">
