@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FixedPlugin /> renders correctly 1`] = `
+<div
+  className="fixed-plugin"
+>
+  <div
+    className="dropdown show"
+  >
+    <div
+      onClick={[Function]}
+    >
+      <i
+        className="fa fa-cog fa-2x"
+      />
+    </div>
+    <ul
+      className="dropdown-menu show"
+    />
+  </div>
+</div>
+`;
+
+exports[`<FixedPlugin /> should render correctly 1`] = `
+<div
+  className="fixed-plugin"
+>
+  <div
+    className="dropdown show"
+  >
+    <div
+      onClick={[Function]}
+    >
+      <i
+        className="fa fa-cog fa-2x"
+      />
+    </div>
+    <ul
+      className="dropdown-menu show"
+    />
+  </div>
+</div>
+`;
