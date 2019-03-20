@@ -7,12 +7,21 @@ def connectDB():
 
 
 def updateStudentVerified(studentID):
-	connectDB()
+	mydb = connectDB()
     cursor = mydb.cursor()
 	cursor.execute("UPDATE STUDENTS SET Verified=1 WHERE StudentID="+str(studentID)+";")
-	cursor.close()	
+	cursor.close()
+	checkCursor = mydb.cursor()
+	checkCursor.execute("SELECT Verified FROM STUDENTS WHERE StudentID="+str(studentID)+";")
+	checkVerified = checkCursor.fetchall()
+	if checkVerified[0] == 1:
+		print("success")
+	else:
+		print("failed")
 	
-	
+	checkCursor.close()
+
+
 def showStudentsTable():
     connectDB()
     studentCursor = mydb.cursor()
@@ -64,41 +73,98 @@ def showSingularMentorInformation(mentorID):
 def insertStudentMentorPair(studentID, mentorID, score):
 	connectDB()
 	cursor = mydb.cursor()
-	cursor.execute("INSERT INTO MENTOR_STUDENT_PAIR (MentorID, StudentID, Compatibility) VALUES ("+studentID+", "+mentorID+", "+str(score)+");"
+	cursor.execute("INSERT INTO MENTOR_STUDENT_PAIR (MentorID, StudentID, Compatibility) VALUES ("+studentID+", "+mentorID+", "+str(score)+");")
 	cursor.close()
+	checkCursor = mydb.cursor()
+	checkCursor.execute("SELECT StudentID, MentorID, Compatibility FROM MENTOR_STUDENT_PAIR WHERE StudentID="+studentID+";")
+	checkDeletion = checkCursor.fetchall()
+	if checkDeletion[0] is None:
+		print("fail")
+	else:
+		print("success")
+	
+	checkCursor.close()
+	
+	
+	
 	
 def deleteStudentMentorPair(studentID):
 	connectDB()
 	cursor = mydb.cursor()
-	cursor.execute("DELETE FROM MENTOR_STUDENT_PAIR WHERE StudentID="+studentID+");"
+	cursor.execute("DELETE FROM MENTOR_STUDENT_PAIR WHERE StudentID="+studentID+";")
 	cursor.close()
-
+	checkCursor = mydb.cursor()
+	checkCursor.execute("SELECT MentorID, StudentID, Compatibility FROM MENTOR_STUDENT_PAIR WHERE StudentID="+studentID+";")
+	checkDeletion = checkCursor.fetchall()
+	if checkDeletion[0] is None:
+		print("success")
+	else:
+		print("fail")
+	
+	checkCursor.close()
+	
 	
 def insertAdmin(adminID, email):
 	connectDB()
 	cursor = mydb.cursor()
-	cursor.execute("INSERT INTO ADMINS (AdminID, KCL_Email) VALUES ("+adminID+", "+email+");"
+	cursor.execute("INSERT INTO ADMINS (AdminID, KCL_Email) VALUES ("+adminID+", "+email+");")
 	cursor.close()
+	checkCursor = mydb.cursor()
+	checkCursor.execute("SELECT AdminID FROM ADMINS WHERE AdminID="+adminID+";")
+	checkInsertion = checkCursor.fetchall()
+	if checkInsertion[0] is None:
+		print("fail")
+	else:
+		print("success")
+	
+	checkCursor.close()
 	
 
 def insertSuperAdmin(adminID):
 	connectDB()
 	cursor = mydb.cursor()
-	cursor.execute("INSERT INTO SUPER_ADMINS (AdminID) VALUES ("+adminID+");"
+	cursor.execute("INSERT INTO SUPER_ADMINS (AdminID) VALUES ("+adminID+";")
 	cursor.close()
+	checkCursor = mydb.cursor()
+	checkCursor.execute("SELECT AdminID FROM SUPER_ADMINS WHERE AdminID="+adminID+";")
+	checkInsertion = checkCursor.fetchall()
+	if checkInsertion[0] is None:
+		print("fail")
+	else:
+		print("success")
+	
+	checkCursor.close()
 	
 def deleteStudent(studentID):
 	connectDB()
 	cursor = mydb.cursor()
-	cursor.execute("DELETE FROM STUDENTS WHERE StudentID="+studentID+");"
+	cursor.execute("DELETE FROM STUDENTS WHERE StudentID="+studentID+";")
 	cursor.close()
+	checkCursor = mydb.cursor()
+	checkCursor.execute("SELECT StudentID FROM STUDENT WHERE StudentID="+studentID+";")
+	checkDeletion = checkCursor.fetchall()
+	if checkDeletion[0] is None:
+		print("success")
+	else:
+		print("fail")
+	
+	checkCursor.close()
 
 
 def deleteMentor(mentorID):
 	connectDB()
 	cursor = mydb.cursor()
-	cursor.execute("DELETE FROM MENTORS WHERE MentorID="+mentorID+");"
+	cursor.execute("DELETE FROM MENTORS WHERE MentorID="+mentorID+";")
 	cursor.close()
+	checkCursor = mydb.cursor()
+	checkCursor.execute("SELECT MentorID FROM MENTORS WHERE MentorID="+mentorID+";")
+	checkDeletion = checkCursor.fetchall()
+	if checkDeletion[0] is None:
+		print("success")
+	else:
+		print("fail")
+	
+	checkCursor.close()
 	
 
 
