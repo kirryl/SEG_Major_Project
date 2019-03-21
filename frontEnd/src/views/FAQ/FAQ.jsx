@@ -1,11 +1,8 @@
 /*eslint-disable*/
 import React from "react";
 import {
-  Alert,
   Card,
-  CardTitle,
   CardBody,
-  CardHeader,
   Row,
   Col
 } from "reactstrap";
