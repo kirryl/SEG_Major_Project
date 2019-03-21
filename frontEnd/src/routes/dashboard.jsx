@@ -1,7 +1,6 @@
 import Home from "views/Home/Home.jsx";
 import MyBuddy from "views/myBuddy/myBuddy.jsx";
 import UserPage from "views/UserPage/UserPage.jsx";
-import FAQ from "views/FAQ/FAQ.jsx";
 import RegisterForm from "views/RegisterForm/RegisterForm.jsx";
 import SignedUp from "views/SignedUp/SignedUp.jsx";
 import CurrentStudents from "views/CurrentStudents/CurrentStudents.jsx";
@@ -25,11 +24,6 @@ var dashRoutes = [
     path: "/user-page",
     name: "User Profile",
     component: UserPage
-  },
-  {
-    path: "/faq",
-    name: "FAQs",
-    component: FAQ
   },
   {
     path: "/current-students",
@@ -57,14 +51,14 @@ var dashRoutes = [
     component: NewScheme
   },
   {
-    path: "/RegisterForm",
-    name: "Sign Up Form",
-    component: RegisterForm
-  },
-  {
     path: "/SignedUp",
     name: "Students who signed up",
     component: SignedUp
+  },
+  {
+    path: "/RegisterForm",
+    name: "Sign Up Form",
+    component: RegisterForm
   },
 
   { redirect: true, path: "/", pathTo: "/home", name: "Home" }
