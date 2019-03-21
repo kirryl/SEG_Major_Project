@@ -2,7 +2,6 @@ import Home from "views/Home/Home.jsx";
 import MyBuddy from "views/myBuddy/myBuddy.jsx";
 import UserPage from "views/UserPage/UserPage.jsx";
 import RegisterForm from "views/RegisterForm/RegisterForm.jsx";
-import SignedUp from "views/SignedUp/SignedUp.jsx";
 import CurrentStudents from "views/CurrentStudents/CurrentStudents.jsx";
 import StudentIssue from "views/StudentIssue/StudentIssue.jsx";
 import AssignStudents from "views/AssignStudents/AssignStudents.jsx";
@@ -49,11 +48,6 @@ var dashRoutes = [
     path: "/new-scheme",
     name: "Create a new scheme",
     component: NewScheme
-  },
-  {
-    path: "/SignedUp",
-    name: "Students who signed up",
-    component: SignedUp
   },
   {
     path: "/RegisterForm",
