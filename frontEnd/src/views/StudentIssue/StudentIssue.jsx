@@ -7,15 +7,6 @@ class StudentIssue extends React.Component {
     return (
       <div className="content">
       <Row>
-        <Col md={10} xs={12}>
-        <Card className="text-center">
-          <CardBody>
-          <h5>Students who need verification or check their report status </h5>
-            <p className="description text-center">
-            As an admin you are able to view all mentor-mentee pairings and manually assign students</p>
-          </CardBody>
-        </Card>
-        </Col>
           <Col xs={10}>
             <Card>
               <CardHeader>

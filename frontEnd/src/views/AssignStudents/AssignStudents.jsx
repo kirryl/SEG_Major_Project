@@ -4,7 +4,6 @@ import { Card, CardHeader, CardBody, CardTitle, Row, Col, Table } from "reactstr
 
 import Button from "components/CustomButton/CustomButton.jsx";
 import FormInputs from "components/FormInputs/FormInputs.jsx"
-import { thead, tbody } from "variables/adminTable";
 
 class AssignStudents extends React.Component {
   render() {
