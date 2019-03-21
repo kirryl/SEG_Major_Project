@@ -41,9 +41,6 @@ class RegisterForm extends React.Component {
                     <option>Reading</option>
                     <option>Others</option>
                     </Input>
-                    <Col>
-                        <Input type="text" placeholder="others..." />
-                    </Col>
                 </FormGroup>
                 <FormGroup>
                     <Label for="exampleSelect1">Interest 2</Label>
@@ -68,9 +65,6 @@ class RegisterForm extends React.Component {
                     <option>Reading</option>
                     <option>Others</option>
                     </Input>
-                    <Col>
-                        <Input type="text" placeholder="others..." />
-                    </Col>
                 </FormGroup>
                 <FormGroup>
                     <Label for="exampleSelect1">Interest 3</Label>
@@ -95,9 +89,6 @@ class RegisterForm extends React.Component {
                     <option>Reading</option>
                     <option>Others</option>
                     </Input>
-                    <Col>
-                        <Input type="text" placeholder="others..." />
-                    </Col>
                 </FormGroup>
                 <FormGroup>
                     <Label for="exampleSelect1">Interest 4</Label>
@@ -122,9 +113,6 @@ class RegisterForm extends React.Component {
                     <option>Reading</option>
                     <option>Others</option>
                     </Input>
-                    <Col>
-                        <Input type="text" placeholder="others..." />
-                    </Col>
                 </FormGroup>
                 <FormGroup>
                     <Label for="exampleSelect1">Interest 5</Label>
@@ -149,9 +137,6 @@ class RegisterForm extends React.Component {
                     <option>Reading</option>
                     <option>Others</option>
                     </Input>
-                    <Col>
-                        <Input type="text" placeholder="others..." />
-                    </Col>
                 </FormGroup>                                                                
                 {/*year of study*/}
                 <FormGroup className="col-md-4">
@@ -183,6 +168,12 @@ class RegisterForm extends React.Component {
                     <span className="check"></span>
                     </span>
                 </Label>
+                </FormGroup>
+                <FormGroup>
+                    <Label for="exampleSelect1">Is there any reason you believe that you should receive special consideration?</Label>
+                    <Col>
+                        <Input type="text" placeholder="" />
+                    </Col>
                 </FormGroup>              
                   <Row>
                     <div className="update ml-auto mr-auto">

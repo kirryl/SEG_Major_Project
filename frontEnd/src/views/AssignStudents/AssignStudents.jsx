@@ -11,15 +11,6 @@ class AssignStudents extends React.Component {
     return (
       <div className="content">
       <Row>
-        <Col md={10} xs={12}>
-        <Card className="text-center">
-          <CardBody>
-          <h5>Assigning students</h5>
-            <p className="description text-center">
-            ...</p>
-          </CardBody>
-        </Card>
-        </Col>
         <Col md={10} xs={10}>
           <Card className="card-user">
             <CardHeader>

@@ -9,15 +9,6 @@ class CurrentStudents extends React.Component {
     return (
       <div className="content">
       <Row>
-        <Col md={10} xs={12}>
-        <Card className="text-center">
-          <CardBody>
-          <h5>This is the...</h5>
-            <p className="description text-center">
-            </p>
-          </CardBody>
-        </Card>
-        </Col>
         <Col xs={10}>
             <Card>
               <CardHeader>
