@@ -5,6 +5,7 @@ import { Card, CardHeader, CardBody, CardTitle, Row, Col,
     Input} from "reactstrap";
 
 import Button from "components/CustomButton/CustomButton.jsx";
+import FormInputs from "components/FormInputs/FormInputs.jsx";
 
 class RegisterForm extends React.Component {
   render() {
@@ -18,6 +19,82 @@ class RegisterForm extends React.Component {
               </CardHeader>
               <CardBody>
                 <form>
+                  <FormInputs
+                    ncols={["col-md-5 pr-1"]}
+                    proprieties={[
+                      {
+                        label: "Email Address",
+                        inputProps: {
+                          type: "email",
+                          disabled: true,
+                          defaultValue: "k1763918@kcl.ac.uk"
+                        }
+                      },
+                    ]}
+                  />
+                  <FormInputs
+                    ncols={["col-md-4 pr-1", "col-md-4 pr-1", "col-md-4 pl-1"]}
+                    proprieties={[
+                      {
+                        label: "First Name",
+                        inputProps: {
+                          type: "text",
+                          disabled: true,
+                          placeholder: "First Name",
+                          defaultValue: "John"
+                        }
+                      },
+                      {
+                        label: "Preferred Name",
+                        inputProps: {
+                          type: "text",
+                          disabled: true,
+                          placeholder: "Preferred Name",
+                          defaultValue: "Johnny"
+                        }
+                      },
+                      {
+                        label: "Last Name",
+                        inputProps: {
+                          type: "text",
+                          disabled: true,
+                          placeholder: "Last Name",
+                          defaultValue: "Doe"
+                        }
+                      }
+                    ]}
+                  />
+                {/*year of study*/}
+                <FormGroup className="col-md-4">
+                    <Label for="inputState">Year of Study</Label>
+                    <Input type="select" name="select" id="inputState" >
+                    <option>Choose...</option>
+                    <option>First</option>
+                    <option>Second</option>
+                    <option>Third</option>
+                    <option>Fourth</option>
+                    <option>Freshers</option>
+                    </Input>
+                </FormGroup>
+                {/*gender*/} 
+                                <FormGroup className="col-md-4">
+                    <Label for="inputState">Gender</Label>
+                    <Input type="select" name="select" id="inputState" >
+                    <option>Choose...</option>
+                    <option>Female</option>
+                    <option>Male</option>
+                    <option>Other</option>
+                    </Input>
+                </FormGroup>
+                <FormGroup check>
+                <Label className="form-check-label">
+                    <Input className="form-check-input" type="checkbox" value=""/>
+                    Would you prefer a mentor of the same gender?
+                    <span className="form-check-sign">
+                    <span className="check"></span>
+                    </span>
+                </Label>
+                </FormGroup>
                 <FormGroup>
                     <Label for="exampleSelect1">Interest 1</Label>
                     <Input type="select" name="select" id="exampleSelect1">
@@ -137,44 +214,13 @@ class RegisterForm extends React.Component {
                     <option>Reading</option>
                     <option>Others</option>
                     </Input>
-                </FormGroup>                                                                
-                {/*year of study*/}
-                <FormGroup className="col-md-4">
-                    <Label for="inputState">Year of Study</Label>
-                    <Input type="select" name="select" id="inputState" >
-                    <option>Choose...</option>
-                    <option>First</option>
-                    <option>Second</option>
-                    <option>Third</option>
-                    <option>Fourth</option>
-                    </Input>
-                </FormGroup>
-
-                {/*gender*/}
-                <FormGroup className="col-md-4">
-                    <Label for="inputState">Gender</Label>
-                    <Input type="select" name="select" id="inputState" >
-                    <option>Choose...</option>
-                    <option>Female</option>
-                    <option>Male</option>
-                    <option>Other</option>
-                    </Input>
-                </FormGroup>
-                <FormGroup check>
-                <Label className="form-check-label">
-                    <Input className="form-check-input" type="checkbox" value=""/>
-                    Would you prefer a mentor of the same gender?
-                    <span className="form-check-sign">
-                    <span className="check"></span>
-                    </span>
-                </Label>
                 </FormGroup>
                 <FormGroup>
                     <Label for="exampleSelect1">Is there any reason you believe that you should receive special consideration?</Label>
                     <Col>
                         <Input type="text" placeholder="" />
                     </Col>
-                </FormGroup>              
+                </FormGroup>                                                                             
                   <Row>
                     <div className="update ml-auto mr-auto">
                       <Button color="primary" round>Submit</Button>
