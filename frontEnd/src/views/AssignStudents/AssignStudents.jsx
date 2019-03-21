@@ -52,74 +52,157 @@ class AssignStudents extends React.Component {
               </CardHeader>
               <CardBody>
               <Table responsive>
-                <thead className=" text-primary">
-                  <th>
-                    Name
-                  </th>
+              <thead className=" text-primary">
                   <th>
                     Email
                   </th>
                   <th>
-                    Status
+                    First Name
                   </th>
-                  <th className="text-right">
-                    Interests
+                  <th>
+                    Preferred Name
+                  </th>
+                  <th>
+                    Last Name
+                  </th>
+                  <th>
+                    Interest 1
+                  </th>
+                  <th>
+                    Interest 2
+                  </th>
+                  <th>
+                    Interest 3
+                  </th>
+                  <th>
+                    Interest 4
+                  </th>
+                  <th>
+                    Interest 5
+                  </th>
+                  <th>
+                    Year
+                  </th>
+                  <th>
+                    Gender
+                  </th>
+                  <th>
+                    Prefer same gender?
                   </th>
                 </thead>
                 <tbody>
                   <tr>
                     <td>
-                      Dakota Rice
+                      k1763918@kcl.ac.uk
                     </td>
                     <td>
-                      example@kcl.ac.uk
+                      Mananchaya
                     </td>
                     <td>
-                      Mentor
+                      Mai
                     </td>
-                    <td className="text-right">
-                      
+                    <td>
+                      Khumtai
+                    </td>
+                    <td>
+                      Cooking
+                    </td>
+                    <td>
+                      Yoga
+                    </td>
+                    <td>
+                      History
+                    </td>
+                    <td>
+                      Japanese
+                    </td>
+                    <td>
+                      Web development
+                    </td>
+                    <td>
+                      Second
+                    </td>
+                    <td>
+                      Female
+                    </td>
+                    <td>
+                      No
                     </td>
                   </tr>
                   <tr>
                     <td>
-                      Minerva Hooper
-                    </td>
-                    <td>
                       example@kcl.ac.uk
                     </td>
                     <td>
-                      Mentor
+                      Jason
                     </td>
-                    <td className="text-right">
-                      
+                    <td>
+                      Jay
+                    </td>
+                    <td>
+                      Steele
+                    </td>
+                    <td>
+                      Movies
+                    </td>
+                    <td>
+                    Movies
+                    </td>
+                    <td>
+                    Movies
+                    </td>
+                    <td>
+                    Movies
+                    </td>
+                    <td>
+                    Movies
+                    </td>
+                    <td>
+                      Third
+                    </td>
+                    <td>
+                      Male
+                    </td>
+                    <td>
+                      No
                     </td>
                   </tr>
                   <tr>
                     <td>
-                      Sage Rodriguez
-                    </td>
-                    <td>
                       example@kcl.ac.uk
                     </td>
                     <td>
-                      Mentee
-                    </td>
-                    <td className="text-right">
-                      
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      Philip Chaney
+                      Jason
                     </td>
                     <td>
-                      example@kcl.ac.uk
+                      Jay
                     </td>
                     <td>
-                      Mentor
+                      Steele
                     </td>
-                    <td className="text-right">
+                    <td>
+                      Movies
+                    </td>
+                    <td>
+                    Movies
+                    </td>
+                    <td>
+                    Movies
+                    </td>
+                    <td>
+                    Movies
+                    </td>
+                    <td>
+                    Movies
+                    </td>
+                    <td>
+                      Third
+                    </td>
+                    <td>
+                      Male
+                    </td>
+                    <td>
+                      No
                     </td>
                   </tr>
                 </tbody>

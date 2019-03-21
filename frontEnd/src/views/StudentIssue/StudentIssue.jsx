@@ -25,9 +25,6 @@ class StudentIssue extends React.Component {
                     Status
                   </th>
                   <th>
-                    Interests
-                  </th>
-                  <th>
                     Proof
                   </th>
                 </thead>
@@ -41,9 +38,6 @@ class StudentIssue extends React.Component {
                     </td>
                     <td>
                       Fresher - Sixth Form
-                    </td>
-                    <td>
-                      
                     </td>
                     <td>
                       Yes
@@ -60,9 +54,6 @@ class StudentIssue extends React.Component {
                     Fresher - Sixth Form
                     </td>
                     <td>
-                      
-                    </td>
-                    <td>
                       No
                     </td>
                   </tr>
@@ -75,9 +66,6 @@ class StudentIssue extends React.Component {
                     </td>
                     <td>
                     Fresher - Sixth Form
-                    </td>
-                    <td>
-                      
                     </td>
                     <td>
                       Yes
