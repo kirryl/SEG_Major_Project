@@ -1,3 +1,5 @@
+/*custom checkbox, import to use*/
+
 import React from "react";
 import { FormGroup, Label, Input } from "reactstrap";
 // used for making the prop types of this component

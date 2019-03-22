@@ -1,20 +1,21 @@
+/*view the profile of your buddy (mentee/mentor)*/
+
 /*eslint-disable*/
 import React from "react";
-import { 
-  Card, CardHeader, CardBody, CardTitle, Row, Col, FormGroup, Label, Input 
+import {
+  Card, CardHeader, CardBody, CardTitle, Row, Col, FormGroup, Label, Input
 } from "reactstrap";
 // react plugin for creating myBuddy over the dashboard
 import NotificationAlert from "react-notification-alert";
 import FormInputs from "components/FormInputs/FormInputs.jsx";
 import Button from "components/CustomButton/CustomButton.jsx";
 
-//import Button from "components/CustomButton/CustomButton.jsx";
-
 class myBuddy extends React.Component {
   render() {
     return (
       <div className="content">
         <Row>
+        /*sets the column size for card*/
         <Col md={12} xs={12}>
             <Card className="card-user">
               <CardHeader>
@@ -79,7 +80,7 @@ class myBuddy extends React.Component {
                         }
                       },
                     ]}
-                  />                  
+                  />
                   <FormInputs
                     ncols={["col-md-12"]}
                     proprieties={[
@@ -124,7 +125,7 @@ class myBuddy extends React.Component {
                         }
                       }
                     ]}
-                  />                  
+                  />
                 </form>
               </CardBody>
             </Card>

@@ -1,3 +1,6 @@
+/*admin and superadmin only - countdown till the end of registration,
+  view all mentors*/
+
 import React from "react";
 import {
   Card,
@@ -14,6 +17,7 @@ class SignedUp extends React.Component {
     return (
         <div className="content">
         <Row>
+        /*sets the column size for the card*/
         <Col md={10} xs={12}>
         <Card className="text-left">
           <CardBody>
@@ -29,45 +33,58 @@ class SignedUp extends React.Component {
               <CardBody>
               <Table responsive>
                 <thead className=" text-primary">
+                /*defines email header cell*/
                   <th>
                     Email
                   </th>
+                  /*defines first name header cell*/
                   <th>
                     First Name
                   </th>
+                  /*defines preferred name header cell*/
                   <th>
                     Preferred Name
                   </th>
+                  /*defines last name header cell*/
                   <th>
                     Last Name
                   </th>
+                  /*defines interest1 header cell*/
                   <th>
                     Interest 1
                   </th>
+                  /*defines interest2 header cell*/
                   <th>
                     Interest 2
                   </th>
+                  /*defines interest3 header cell*/
                   <th>
                     Interest 3
                   </th>
+                  /*defines interest4 header cell*/
                   <th>
                     Interest 4
                   </th>
+                  /*defines interest 5 header cell*/
                   <th>
                     Interest 5
                   </th>
+                  /*defines year header cell*/
                   <th>
                     Year
                   </th>
+                  /*defines gender header cell*/
                   <th>
                     Gender
                   </th>
+                  /*defines gender preference header cell (boolean)*/
                   <th>
                     Prefer same gender?
                   </th>
                 </thead>
                 <tbody>
                   <tr>
+                  /*rows in table*/
                     <td>
                       k1763918@kcl.ac.uk
                     </td>
@@ -116,7 +133,7 @@ class SignedUp extends React.Component {
                       Mentor
                     </td>
                     <td className="text-right">
-                      
+
                     </td>
                   </tr>
                   <tr>
@@ -130,7 +147,7 @@ class SignedUp extends React.Component {
                       Mentee
                     </td>
                     <td className="text-right">
-                      
+
                     </td>
                   </tr>
                   <tr>
@@ -143,6 +160,7 @@ class SignedUp extends React.Component {
                     <td>
                       Mentor
                     </td>
+                    
                     <td className="text-right">
                     </td>
                   </tr>

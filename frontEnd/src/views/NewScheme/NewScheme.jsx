@@ -11,7 +11,9 @@ class NewScheme extends React.Component {
     return (
     <div className="content">
       <Row>
+      /*sets the column size for card*/
         <Col md={10} xs={12}>
+        /*centers the text contained in the card*/
         <Card className="text-center">
           <CardBody>
           <h5>To create a new scheme:</h5>
@@ -23,12 +25,14 @@ class NewScheme extends React.Component {
         </Col>
     </Row>
     <Row>
+      /*sets the column size for card*/
           <Col md={10} xs={12}>
             <Card className="card-user">
               <CardHeader>
                 <CardTitle>Start a new scheme</CardTitle>
               </CardHeader>
               <CardBody>
+              /*form to input the information to create a new scheme*/
                 <form>
                   <FormInputs
                     ncols={["col-md-7 pr-1"]}
@@ -106,7 +110,7 @@ class NewScheme extends React.Component {
                         }
                       },
                     ]}
-                  />                                                                          
+                  />
                   <Row>
                     <div className="update ml-auto mr-auto">
                       <Button color="primary" round>Submit</Button>
