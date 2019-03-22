@@ -1,36 +1,31 @@
 import React from "react";
-import { Card, CardHeader, CardBody, CardTitle, Row, Col } from "reactstrap";
+import { Card, CardHeader, CardBody, CardTitle, Row, Col, CardImg, CardText } from "reactstrap";
 
 import CardAuthor from "components/CardElements/CardAuthor.jsx";
 import FormInputs from "components/FormInputs/FormInputs.jsx";
 import Button from "components/CustomButton/CustomButton.jsx";
 
-import damirBosnjak from "assets/img/damir-bosnjak.jpg";
 import mike from "assets/img/mike.jpg";
 
 class User extends React.Component {
   render() {
     return (
       <div className="content">
-        <Row>
-          <Col md={4} xs={12}>
-            <Card className="card-user">
-              <div className="image">
-                <img src={damirBosnjak} alt="..." />
-              </div>
+              <Row>
+              <Card style={{width: '20rem'}}>
+          <CardImg top src={mike} alt="..." />
+          <CardBody>
               <CardBody>
                 <CardAuthor
-                  avatar={mike}
-                  avatarAlt="..."
                   title="John (Johnny) Doe"
                   description="k1763918@kcl.ac.uk"
                 />
-                <p className="description text-center">
+                <p className="description text-left">
                   Nice to meet you!
                 </p>
               </CardBody>
+          </CardBody>
             </Card>
-          </Col>
           <Col md={8} xs={12}>
             <Card className="card-user">
               <CardHeader>
@@ -67,7 +62,6 @@ class User extends React.Component {
                         label: "Preferred Name",
                         inputProps: {
                           type: "text",
-                          disabled: true,
                           placeholder: "Preferred Name",
                           defaultValue: "Johnny"
                         }
