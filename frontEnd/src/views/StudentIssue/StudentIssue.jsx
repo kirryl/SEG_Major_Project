@@ -1,6 +1,9 @@
 /*eslint-disable*/
 import React from "react";
-import { Card, CardHeader, CardBody, CardTitle, Row, Col, Table } from "reactstrap";
+import { Card, CardHeader, CardBody, CardTitle, Row, Col, Table, FormGroup,
+  Label, Input } from "reactstrap";
+
+import Button from "components/CustomButton/CustomButton.jsx";
 
 class StudentIssue extends React.Component {
   render() {
@@ -27,6 +30,9 @@ class StudentIssue extends React.Component {
                   <th>
                     Proof
                   </th>
+                  <th>
+                    Verify?
+                  </th>
                 </thead>
                 <tbody>
                   <tr>
@@ -42,6 +48,14 @@ class StudentIssue extends React.Component {
                     <td>
                       Yes
                     </td>
+                    <td>
+                    <div className="form-check-radio form-check-inline">
+                      <Label className="form-check-label">
+                          <Input type="radio" name="exampleRadios1" id="exampleRadios11" value="option1" />
+                          <span className="form-check-sign"></span>
+                      </Label>
+                    </div>
+                    </td>
                   </tr>
                   <tr>
                     <td>
@@ -55,6 +69,14 @@ class StudentIssue extends React.Component {
                     </td>
                     <td>
                       No
+                    </td>
+                    <td>
+                    <div className="form-check-radio form-check-inline">
+                      <Label className="form-check-label">
+                          <Input type="radio" name="exampleRadios1" id="exampleRadios11" value="option1" />
+                          <span className="form-check-sign"></span>
+                      </Label>
+                    </div>
                     </td>
                   </tr>
                   <tr>
@@ -70,10 +92,24 @@ class StudentIssue extends React.Component {
                     <td>
                       Yes
                     </td>
+                    <td>
+                    <div className="form-check-radio form-check-inline">
+                      <Label className="form-check-label">
+                          <Input type="radio" name="exampleRadios1" id="exampleRadios11" value="option1" />
+                          <span className="form-check-sign"></span>
+                      </Label>
+                    </div>
+                    </td>
                   </tr>
                 </tbody>
               </Table>
               </CardBody>
+              <Row>
+                    <div className="update ml-auto mr-auto">
+                      <Button color="primary" round>Update</Button>
+                      <Button href="./student-issue" color="secondary" round>Undo</Button>
+                    </div>
+                  </Row>
             </Card>
           </Col>
 

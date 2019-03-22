@@ -217,7 +217,7 @@ class RegisterForm extends React.Component {
                 <FormGroup>
                     <Label for="exampleSelect1">Is there any reason you believe that you should receive special consideration?</Label>
                     <Col>
-                        <Input type="text" placeholder="" />
+                        <Input type="text" placeholder=""/>
                     </Col>
                 </FormGroup>                                                                             
                   <Row>

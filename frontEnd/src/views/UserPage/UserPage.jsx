@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, CardHeader, CardBody, CardTitle, Row, Col, CardImg, CardText } from "reactstrap";
+import { Card, CardHeader, CardBody, CardTitle, Row, Col, CardImg } from "reactstrap";
 
 import CardAuthor from "components/CardElements/CardAuthor.jsx";
 import FormInputs from "components/FormInputs/FormInputs.jsx";

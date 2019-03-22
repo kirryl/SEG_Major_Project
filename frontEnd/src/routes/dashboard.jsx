@@ -49,11 +49,6 @@ var dashRoutes = [
     name: "Create a new scheme",
     component: NewScheme
   },
-  {
-    path: "/RegisterForm",
-    name: "Sign Up Form",
-    component: RegisterForm
-  },
 
   { redirect: true, path: "/", pathTo: "/home", name: "Home" }
 ];
