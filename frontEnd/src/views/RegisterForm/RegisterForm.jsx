@@ -83,7 +83,7 @@ class RegisterForm extends React.Component {
                     <option>Choose...</option>
                     <option>Female</option>
                     <option>Male</option>
-                    <option>Other</option>
+                    <option>Prefer not to say</option>
                     </Input>
                 </FormGroup>
                 <FormGroup check>

@@ -2,8 +2,6 @@ import React from "react";
 import {
   Card,
   CardBody,
-  CardTitle,
-  CardText,
   Row,
   Col
 } from "reactstrap";
@@ -14,27 +12,51 @@ class Home extends React.Component {
   render() {
     return (
       <div className="content">
-
     <CardBody>
     <h2 className="title">King's College London Student Buddy System</h2>
     </CardBody>
           <Row>
-          <Col md={12}>
-          {/*individual cards for each faq*/}
-            <Col md={10}>
-        <Card className="text-center">
-        <CardBody>
-      <CardText>The student buddy scheme is an informal support scheme to help students in the department network across all different years.
-
-      It has been designed for the use of King's College London students.
-      For non-KCL student, student who has yet have a KCL email please sign-up through freshers button.
-      
-      </CardText>
-      {/* Add link to FAQ page */}
-            </CardBody>
-            </Card>
+          <Col md={9}>
+          <blockquote className="blockquote">
+          <p className="mb-0">
+            The student buddy scheme is an informal support scheme to help students in the department network across all different years.
+            It has been designed for the use of King's College London students.
+            <br></br>
+            For non-KCL student, student who has yet have a KCL email please sign-up through freshers button.
+          </p>
+          </blockquote>
             </Col>
-            <Col md={10} xs={12}>
+            </Row>
+            <Row>
+        <CardBody>
+        <h4 className="title">Get Started</h4>
+        </CardBody>
+        </Row>
+        <Row>
+        <Col md={3}>
+          <Card className="text-center">
+            <CardBody>
+            <h4>KCL Student</h4>
+            <Button color="primary">Sign-up</Button>
+            </CardBody>
+          </Card>
+        </Col>
+        <Col md={3}>
+        <Card className="text-center">
+            <CardBody>
+            <h4>Freshers</h4>
+            <Button color="primary">Sign-up</Button>
+            </CardBody>
+          </Card>
+        </Col>
+        </Row>
+        <Row>
+        <CardBody>
+        <h4 className="title">Want to know more?</h4>
+        </CardBody>
+        </Row>
+          {/*individual cards for each faq*/}
+            <Col md={7}>
             <Card className="text-left">
               <CardBody>
               <h6>What am I allowed to talk about?</h6>
@@ -46,7 +68,7 @@ class Home extends React.Component {
               </CardBody>
             </Card>
             </Col>
-            <Col md={10} xs={12}>
+            <Col md={7}>
             <Card className="text-left">
               <CardBody>
               <h6>How long does the buddy system last?</h6>
@@ -58,7 +80,7 @@ class Home extends React.Component {
               </CardBody>
             </Card>
             </Col> 
-            <Col md={10} xs={12}>
+            <Col md={7}>
             <Card className="text-left">
               <CardBody>
               <h6>Can my friends from other department join?</h6>
@@ -68,7 +90,7 @@ class Home extends React.Component {
               </CardBody>
             </Card>
             </Col>                        
-            <Col md={10} xs={12}>
+            <Col md={7}>
             <Card className="text-left">
               <CardBody>
               <h6>Me and my buddy cannot get along at all, What should I do?</h6>
@@ -80,7 +102,7 @@ class Home extends React.Component {
               </CardBody>
             </Card>
             </Col>
-            <Col md={10} xs={12}>
+            <Col md={7}>
             <Card className="text-left">
               <CardBody>
               <h6>In what case can I report my buddy?</h6>
@@ -92,7 +114,7 @@ class Home extends React.Component {
               </CardBody>
             </Card>
             </Col>
-            <Col md={10} xs={12}>
+            <Col md={7}>
             <Card className="text-left">
               <CardBody>
               <h6>I want to report my buddy</h6>
@@ -102,9 +124,7 @@ class Home extends React.Component {
                 </p>
               </CardBody>
             </Card>
-            </Col>
           </Col>
-        </Row>
       </div>
 
     )
