@@ -67,6 +67,7 @@ class User extends React.Component {
                         label: "Preferred Name",
                         inputProps: {
                           type: "text",
+                          disabled: true,
                           placeholder: "Preferred Name",
                           defaultValue: "Johnny"
                         }

@@ -3,18 +3,17 @@ import {
   Card,
   CardBody,
   Row,
+  CardImg,
   Col
 } from "reactstrap";
 
 import Button from "components/CustomButton/CustomButton.jsx";
+import landing from "assets/img/landing.jpg";
 
 class Home extends React.Component {
   render() {
     return (
       <div className="content">
-    <CardBody>
-    <h2 className="title">King's College London Student Buddy System</h2>
-    </CardBody>
           <Row>
           <Col md={9}>
           <blockquote className="blockquote">
@@ -22,12 +21,19 @@ class Home extends React.Component {
             The student buddy scheme is an informal support scheme to help students in the department network across all different years.
             It has been designed for the use of King's College London students.
             <br></br>
-            For non-KCL student, student who has yet have a KCL email please sign-up through freshers button.
+            -For non-KCL student, student who has yet have a KCL email please sign-up through freshers button-
           </p>
           </blockquote>
-            </Col>
-            </Row>
-            <Row>
+        </Col>
+        </Row>
+        <Row>
+        <Col md={10}>
+        <Card style={{width: '52rem'}}>
+            <CardImg top src={landing} alt="..." />
+        </Card>
+        </Col>
+        </Row>
+        <Row>
         <CardBody>
         <h4 className="title">Get Started</h4>
         </CardBody>

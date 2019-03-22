@@ -11,7 +11,7 @@ import NewScheme from "views/NewScheme/NewScheme.jsx";
 var dashRoutes = [
   {
     path: "/home",
-    name: "Home",
+    name: "King's College London Student Buddy System",
     component: Home
   },
   {
