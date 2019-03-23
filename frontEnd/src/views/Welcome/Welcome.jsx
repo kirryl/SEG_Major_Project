@@ -3,63 +3,73 @@ import {
   Card,
   CardBody,
   Row,
+  CardImg,
   Col
 } from "reactstrap";
 
 import Button from "components/CustomButton/CustomButton.jsx";
+import landing from "assets/img/landing.jpg";
+import logo from "assets/img/kcl-logo.png";
 
-class Home extends React.Component {
+class Welcome extends React.Component {
   render() {
     return (
       <div className="content">
-    <CardBody>
-    <h2 className="title">King's College London Student Buddy System</h2>
-    </CardBody>
           <Row>
           {/*sets the column size for card*/}
+          <a href="https://keats.kcl.ac.uk/my/"><img src={logo} alt="KCL Logo" width="160" height="122" style={{ float:`right` }}></img></a>
           <Col md={9}>
           <blockquote className="blockquote">
           <p className="mb-0">
             The student buddy scheme is an informal support scheme to help students in the department network across all different years.
             It has been designed for the use of King's College London students.
             <br></br>
-            For non-KCL student, student who has yet have a KCL email please sign-up through freshers button.
+            -For non-KCL student / student who has yet have a KCL email please sign-up through freshers button-
           </p>
           </blockquote>
-            </Col>
-            </Row>
-            <Row>
+        </Col>
+        </Row>
+        <Row>
+        <Col md={10}>
+        <Card style={{width: '62rem'}}>
+            <CardImg top src={landing} alt="..." />
+        </Card>
+        </Col>
+        </Row>
+        <Row>
         <CardBody>
         <h4 className="title">Get Started</h4>
         </CardBody>
         </Row>
         <Row>
       {/*medium*/}
-        <Col md={3}>
+        <Col md={4}>
           <Card className="text-center">
             <CardBody>
-            <h4>KCL Student</h4>
-            <Button color="primary">Sign-up</Button>
+            <h4>Current Student</h4>
+            <Button href="./RegisterForm" color="primary">Sign-up</Button>
             </CardBody>
           </Card>
         </Col>
         {/*medium*/}
-        <Col md={3}>
+        <Col md={4}>
         <Card className="text-center">
             <CardBody>
-            <h4>Freshers</h4>
-            <Button color="primary">Sign-up</Button>
+            <h4>Prospective Student</h4>
+            <Button href="./RegisterForm" color="primary">Sign-up</Button>
             </CardBody>
           </Card>
         </Col>
         </Row>
         <Row>
         <CardBody>
-        <h4 className="title">Want to know more?</h4>
+        <h4 className="title">
+        Want to know more? - Read our FAQs!
+        </h4>
         </CardBody>
         </Row>
           {/*individual cards for each faq*/}
-            <Col md={7}>
+            <Col md={8}>
             <Card className="text-left">
               <CardBody>
               <h6>What am I allowed to talk about?</h6>
@@ -71,7 +81,7 @@ class Home extends React.Component {
               </CardBody>
             </Card>
             </Col>
-            <Col md={7}>
+            <Col md={8}>
             <Card className="text-left">
               <CardBody>
               <h6>How long does the buddy system last?</h6>
@@ -82,8 +92,8 @@ class Home extends React.Component {
                 </p>
               </CardBody>
             </Card>
-            </Col>
-            <Col md={7}>
+            </Col> 
+            <Col md={8}>
             <Card className="text-left">
               <CardBody>
               <h6>Can my friends from other department join?</h6>
@@ -92,8 +102,8 @@ class Home extends React.Component {
                 </p>
               </CardBody>
             </Card>
-            </Col>
-            <Col md={7}>
+            </Col>                        
+            <Col md={8}>
             <Card className="text-left">
               <CardBody>
               <h6>Me and my buddy cannot get along at all, What should I do?</h6>
@@ -105,7 +115,7 @@ class Home extends React.Component {
               </CardBody>
             </Card>
             </Col>
-            <Col md={7}>
+            <Col md={8}>
             <Card className="text-left">
               <CardBody>
               <h6>In what case can I report my buddy?</h6>
@@ -117,7 +127,7 @@ class Home extends React.Component {
               </CardBody>
             </Card>
             </Col>
-            <Col md={7}>
+            <Col md={8}>
             <Card className="text-left">
               <CardBody>
               <h6>I want to report my buddy</h6>
@@ -128,11 +138,12 @@ class Home extends React.Component {
               </CardBody>
             </Card>
           </Col>
+          <Col md={8}>
+              <p>If you have any further questions please email us at <a href="mailto:ug-informatics@kcl.ac.uk">ug-informatics@kcl.ac.uk</a></p>
+          </Col>
       </div>
 
     )
   };
 }
-
-
-export default Home;
+export default Welcome;

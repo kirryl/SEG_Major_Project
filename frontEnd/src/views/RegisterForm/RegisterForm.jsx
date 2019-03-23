@@ -51,7 +51,6 @@ class RegisterForm extends React.Component {
                         label: "Preferred Name",
                         inputProps: {
                           type: "text",
-                          disabled: true,
                           placeholder: "Preferred Name",
                           defaultValue: "Johnny"
                         }
@@ -226,7 +225,7 @@ class RegisterForm extends React.Component {
                 <FormGroup>
                     <Label for="exampleSelect1">Is there any reason you believe that you should receive special consideration?</Label>
                     <Col>
-                        <Input type="text" placeholder="" />
+                        <Input type="text" placeholder=""/>
                     </Col>
                 </FormGroup>
                   <Row>

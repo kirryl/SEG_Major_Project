@@ -156,7 +156,6 @@ class Header extends React.Component {
                 </DropdownToggle>
                 <DropdownMenu right>
                   <DropdownItem tag="a">Log-in</DropdownItem>
-                  <DropdownItem tag="a">Log-out</DropdownItem>
                   <DropdownItem tag="a">Forgot your password?</DropdownItem>
                 </DropdownMenu>
               </Dropdown>

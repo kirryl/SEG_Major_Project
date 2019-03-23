@@ -1,11 +1,10 @@
 import React from "react";
-import { Card, CardHeader, CardBody, CardTitle, Row, Col } from "reactstrap";
+import { Card, CardHeader, CardBody, CardTitle, Row, Col, CardImg } from "reactstrap";
 
 import CardAuthor from "components/CardElements/CardAuthor.jsx";
 import FormInputs from "components/FormInputs/FormInputs.jsx";
 import Button from "components/CustomButton/CustomButton.jsx";
 
-import damirBosnjak from "assets/img/damir-bosnjak.jpg";
 import mike from "assets/img/mike.jpg";
 
 /* Student is able to view their personal profile with their personal details.
@@ -14,30 +13,22 @@ class User extends React.Component {
   render() {
     return (
       <div className="content">
-        <Row>
-         {/*sets the column size for card, far left of page*/}
-          <Col md={4} xs={12}>
-            <Card className="card-user">
-              <div className="image">
-              {/*profile picture*/}
-                <img src={damirBosnjak} alt="..." />
-              </div>
+              <Row>
+              <Card style={{width: '20rem'}}>
+          <CardImg top src={mike} alt="..." />
+          <CardBody>
               <CardBody>
               {/*name and email*/}
                 <CardAuthor
-                  avatar={mike}
-                  avatarAlt="..."
                   title="John (Johnny) Doe"
                   description="k1763918@kcl.ac.uk"
                 />
-                <p className="description text-center">
+                <p className="description text-left">
                   Nice to meet you!
                 </p>
               </CardBody>
+          </CardBody>
             </Card>
-          </Col>
-
-          {/*sets the column size for the card*/}
           <Col md={8} xs={12}>
             <Card className="card-user">
               <CardHeader>
