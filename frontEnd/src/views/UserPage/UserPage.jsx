@@ -46,6 +46,7 @@ class User extends React.Component {
                       },
                     ]}
                   />
+                  
                   <FormInputs
                     ncols={["col-md-4 pr-1", "col-md-4 pr-1", "col-md-4 pl-1"]}
                     proprieties={[
