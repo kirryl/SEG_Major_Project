@@ -1,3 +1,5 @@
+/*form for students to input their interests*/
+
 import React from "react";
 import { Card, CardHeader, CardBody, CardTitle, Row, Col,
     FormGroup,
@@ -12,6 +14,7 @@ class RegisterForm extends React.Component {
     return (
       <div className="content">
         <Row>
+        /*sets the column size for the card*/
           <Col md={8} xs={12}>
             <Card className="card-user">
               <CardHeader>
@@ -76,7 +79,7 @@ class RegisterForm extends React.Component {
                     <option>Freshers</option>
                     </Input>
                 </FormGroup>
-                {/*gender*/} 
+                {/*gender*/}
                                 <FormGroup className="col-md-4">
                     <Label for="inputState">Gender</Label>
                     <Input type="select" name="select" id="inputState" >
@@ -96,12 +99,13 @@ class RegisterForm extends React.Component {
                 </Label>
                 </FormGroup>
                 <FormGroup>
+                    /*user selects from dropdown list*/
                     <Label for="exampleSelect1">Interest 1</Label>
                     <Input type="select" name="select" id="exampleSelect1">
                     <option>Web Development</option>
-                    <option>AI/Machine Learning</option> 
+                    <option>AI/Machine Learning</option>
                     <option>TV Show/Movie - Romance</option>
-                    <option>TV Show/Movie - Independent</option>      
+                    <option>TV Show/Movie - Independent</option>
                     <option>TV Show/Movie - Comedy</option>
                     <option>TV Show/Movie - Horror</option>
                     <option>TV Show/Movie - Sci-fi</option>
@@ -120,12 +124,13 @@ class RegisterForm extends React.Component {
                     </Input>
                 </FormGroup>
                 <FormGroup>
+                /*user selects from dropdown list*/
                     <Label for="exampleSelect1">Interest 2</Label>
                     <Input type="select" name="select" id="exampleSelect1">
                     <option>Web Development</option>
-                    <option>AI/Machine Learning</option> 
+                    <option>AI/Machine Learning</option>
                     <option>TV Show/Movie - Romance</option>
-                    <option>TV Show/Movie - Independent</option>      
+                    <option>TV Show/Movie - Independent</option>
                     <option>TV Show/Movie - Comedy</option>
                     <option>TV Show/Movie - Horror</option>
                     <option>TV Show/Movie - Sci-fi</option>
@@ -144,12 +149,13 @@ class RegisterForm extends React.Component {
                     </Input>
                 </FormGroup>
                 <FormGroup>
+                /*user selects from dropdown list*/
                     <Label for="exampleSelect1">Interest 3</Label>
                     <Input type="select" name="select" id="exampleSelect1">
                     <option>Web Development</option>
-                    <option>AI/Machine Learning</option> 
+                    <option>AI/Machine Learning</option>
                     <option>TV Show/Movie - Romance</option>
-                    <option>TV Show/Movie - Independent</option>      
+                    <option>TV Show/Movie - Independent</option>
                     <option>TV Show/Movie - Comedy</option>
                     <option>TV Show/Movie - Horror</option>
                     <option>TV Show/Movie - Sci-fi</option>
@@ -168,12 +174,13 @@ class RegisterForm extends React.Component {
                     </Input>
                 </FormGroup>
                 <FormGroup>
+                /*user selects from dropdown list*/
                     <Label for="exampleSelect1">Interest 4</Label>
                     <Input type="select" name="select" id="exampleSelect1">
                     <option>Web Development</option>
-                    <option>AI/Machine Learning</option> 
+                    <option>AI/Machine Learning</option>
                     <option>TV Show/Movie - Romance</option>
-                    <option>TV Show/Movie - Independent</option>      
+                    <option>TV Show/Movie - Independent</option>
                     <option>TV Show/Movie - Comedy</option>
                     <option>TV Show/Movie - Horror</option>
                     <option>TV Show/Movie - Sci-fi</option>
@@ -192,12 +199,13 @@ class RegisterForm extends React.Component {
                     </Input>
                 </FormGroup>
                 <FormGroup>
+                /*user selects from dropdown list*/
                     <Label for="exampleSelect1">Interest 5</Label>
                     <Input type="select" name="select" id="exampleSelect1">
                     <option>Web Development</option>
-                    <option>AI/Machine Learning</option> 
+                    <option>AI/Machine Learning</option>
                     <option>TV Show/Movie - Romance</option>
-                    <option>TV Show/Movie - Independent</option>      
+                    <option>TV Show/Movie - Independent</option>
                     <option>TV Show/Movie - Comedy</option>
                     <option>TV Show/Movie - Horror</option>
                     <option>TV Show/Movie - Sci-fi</option>
@@ -220,7 +228,7 @@ class RegisterForm extends React.Component {
                     <Col>
                         <Input type="text" placeholder="" />
                     </Col>
-                </FormGroup>                                                                             
+                </FormGroup>
                   <Row>
                     <div className="update ml-auto mr-auto">
                       <Button color="primary" round>Submit</Button>

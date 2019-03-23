@@ -1,3 +1,5 @@
+/*footer - import to use*/
+
 /*eslint-disable*/
 import React from "react";
 import { Container, Row } from "reactstrap";

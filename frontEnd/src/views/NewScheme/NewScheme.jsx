@@ -9,8 +9,10 @@ class NewScheme extends React.Component {
   render() {
     return (
     <div className="content">
-              <Row>
+      <Row>
+      /*sets the column size for card*/
         <Col md={10} xs={12}>
+        /*centers the text contained in the card*/
         <Card className="text-left">
           <CardBody>
           <h5>10 Days until end of registration</h5>
@@ -112,7 +114,7 @@ class NewScheme extends React.Component {
                       Mentor
                     </td>
                     <td className="text-right">
-                      
+
                     </td>
                   </tr>
                   <tr>
@@ -126,7 +128,7 @@ class NewScheme extends React.Component {
                       Mentee
                     </td>
                     <td className="text-right">
-                      
+
                     </td>
                   </tr>
                   <tr>
@@ -149,12 +151,14 @@ class NewScheme extends React.Component {
           </Col>
         </Row>
     <Row>
+      /*sets the column size for card*/
           <Col md={10} xs={12}>
             <Card className="card-user">
               <CardHeader>
                 <CardTitle>Start a new scheme</CardTitle>
               </CardHeader>
               <CardBody>
+              /*form to input the information to create a new scheme*/
                 <form>
                   <FormInputs
                     ncols={["col-md-7 pr-1"]}
@@ -232,7 +236,7 @@ class NewScheme extends React.Component {
                         }
                       },
                     ]}
-                  />                                                                          
+                  />
                   <Row>
                     <div className="update ml-auto mr-auto">
                       <Button color="primary" round>Submit</Button>
