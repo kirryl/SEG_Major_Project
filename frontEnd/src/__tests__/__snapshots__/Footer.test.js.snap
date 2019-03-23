@@ -1,0 +1,95 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Footer /> renders correctly 1`] = `
+<footer
+  className="footer"
+>
+  <div
+    className="container"
+  >
+    <div
+      className="row"
+    >
+      <nav
+        className="footer-nav"
+      >
+        <ul>
+          <li>
+            <a
+              href="https://keats.kcl.ac.uk/my/"
+              target="_blank"
+            >
+              KEATS
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.creative-tim.com/license"
+              target="_blank"
+            >
+              Licenses
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <div
+        className="credits ml-auto"
+      >
+        <div
+          className="copyright"
+        >
+          © 
+          2019
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+`;
+
+exports[`<Footer /> should render correctly 1`] = `
+<footer
+  className="footer"
+>
+  <div
+    className="container"
+  >
+    <div
+      className="row"
+    >
+      <nav
+        className="footer-nav"
+      >
+        <ul>
+          <li>
+            <a
+              href="https://keats.kcl.ac.uk/my/"
+              target="_blank"
+            >
+              KEATS
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.creative-tim.com/license"
+              target="_blank"
+            >
+              Licenses
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <div
+        className="credits ml-auto"
+      >
+        <div
+          className="copyright"
+        >
+          © 
+          2019
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+`;

@@ -6,13 +6,8 @@ import {
   CardHeader,
   Table,
   Row,
-  Col,
-  FormGroup,
-  Label,
-  Input
+  Col
 } from "reactstrap";
-
-import Button from "components/CustomButton/CustomButton.jsx";
 
 class SignedUp extends React.Component {
   render() {
