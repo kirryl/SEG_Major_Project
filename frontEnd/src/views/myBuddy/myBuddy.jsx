@@ -1,6 +1,4 @@
-/*view the profile of your buddy (mentee/mentor)*/
-
-/*eslint-disable*/
+{/*eslint-disable*/}
 import React from "react";
 import {
   Card, CardHeader, CardBody, CardTitle, Row, Col, FormGroup, Label, Input
@@ -10,12 +8,14 @@ import NotificationAlert from "react-notification-alert";
 import FormInputs from "components/FormInputs/FormInputs.jsx";
 import Button from "components/CustomButton/CustomButton.jsx";
 
+{/*view the profile of your buddy (mentee/mentor)*/}
+
 class myBuddy extends React.Component {
   render() {
     return (
       <div className="content">
         <Row>
-        /*sets the column size for card*/
+        {/*sets the column size for card*/}
         <Col md={12} xs={12}>
             <Card className="card-user">
               <CardHeader>

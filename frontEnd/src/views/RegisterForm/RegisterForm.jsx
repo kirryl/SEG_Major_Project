@@ -1,5 +1,3 @@
-/*form for students to input their interests*/
-
 import React from "react";
 import { Card, CardHeader, CardBody, CardTitle, Row, Col,
     FormGroup,
@@ -9,12 +7,14 @@ import { Card, CardHeader, CardBody, CardTitle, Row, Col,
 import Button from "components/CustomButton/CustomButton.jsx";
 import FormInputs from "components/FormInputs/FormInputs.jsx";
 
+{/*form for students to input their interests*/}
+
 class RegisterForm extends React.Component {
   render() {
     return (
       <div className="content">
         <Row>
-        /*sets the column size for the card*/
+        {/*sets the column size for the card*/}
           <Col md={8} xs={12}>
             <Card className="card-user">
               <CardHeader>
@@ -99,7 +99,7 @@ class RegisterForm extends React.Component {
                 </Label>
                 </FormGroup>
                 <FormGroup>
-                    /*user selects from dropdown list*/
+                    {/*user selects from dropdown list*/}
                     <Label for="exampleSelect1">Interest 1</Label>
                     <Input type="select" name="select" id="exampleSelect1">
                     <option>Web Development</option>
@@ -124,7 +124,7 @@ class RegisterForm extends React.Component {
                     </Input>
                 </FormGroup>
                 <FormGroup>
-                /*user selects from dropdown list*/
+                {/*user selects from dropdown list*/}
                     <Label for="exampleSelect1">Interest 2</Label>
                     <Input type="select" name="select" id="exampleSelect1">
                     <option>Web Development</option>
@@ -149,7 +149,7 @@ class RegisterForm extends React.Component {
                     </Input>
                 </FormGroup>
                 <FormGroup>
-                /*user selects from dropdown list*/
+                {/*user selects from dropdown list*/}
                     <Label for="exampleSelect1">Interest 3</Label>
                     <Input type="select" name="select" id="exampleSelect1">
                     <option>Web Development</option>
@@ -174,7 +174,7 @@ class RegisterForm extends React.Component {
                     </Input>
                 </FormGroup>
                 <FormGroup>
-                /*user selects from dropdown list*/
+                {/*user selects from dropdown list*/}
                     <Label for="exampleSelect1">Interest 4</Label>
                     <Input type="select" name="select" id="exampleSelect1">
                     <option>Web Development</option>
@@ -199,7 +199,7 @@ class RegisterForm extends React.Component {
                     </Input>
                 </FormGroup>
                 <FormGroup>
-                /*user selects from dropdown list*/
+                {/*user selects from dropdown list*/}
                     <Label for="exampleSelect1">Interest 5</Label>
                     <Input type="select" name="select" id="exampleSelect1">
                     <option>Web Development</option>

@@ -1,5 +1,3 @@
-/*custom fixed plugin, import to use*/
-
 import React, { Component } from "react";
 
 //import Button from "components/CustomButton/CustomButton.jsx";

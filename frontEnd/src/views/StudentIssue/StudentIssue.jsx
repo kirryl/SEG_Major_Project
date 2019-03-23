@@ -1,7 +1,7 @@
-/* admin only- view students who have been reported and verify freshers who sign up with
-    personal email address */
+{/* admin only- view students who have been reported and verify freshers who sign up with
+    personal email address */}
 
-/*eslint-disable*/
+{/*eslint-disable*/}
 import React from "react";
 import { Card, CardHeader, CardBody, CardTitle, Row, Col, Table } from "reactstrap";
 
@@ -10,7 +10,7 @@ class StudentIssue extends React.Component {
     return (
       <div className="content">
       <Row>
-          /*sets the column size for card*/
+          {/*sets the column size for card*/}
           <Col xs={10}>
             <Card>
               <CardHeader>
@@ -19,26 +19,26 @@ class StudentIssue extends React.Component {
               <CardBody>
               <Table responsive>
                 <thead className=" text-primary">
-                /*defines name header cell*/
+                {/*defines name header cell*/}
                   <th>
                     Name
                   </th>
-                  /*defines email header cell */
+                  {/*defines email header cell */}
                   <th>
                     Email
                   </th>
-                  /*defines status header cell*/
+                  {/*defines status header cell*/}
                   <th>
                     Status
                   </th>
-                  /*defines interests header cell*/
+                  {/*defines interests header cell*/}
                   <th>
                     Proof
                   </th>
                 </thead>
                 <tbody>
                   <tr>
-                  /*rows in table*/
+                  {/*rows in table*/}
                     <td>
                     Mason Porter
                     </td>
@@ -87,7 +87,7 @@ class StudentIssue extends React.Component {
           </Col>
 
           <Col xs={10}>
-          /* card below student verified */
+          {/* card below student verified */}
             <Card>
               <CardHeader>
                 <CardTitle tag="h4">Students who were reported</CardTitle>
@@ -95,34 +95,34 @@ class StudentIssue extends React.Component {
               <CardBody>
               <Table responsive>
                 <thead className=" text-primary">
-                /*defines reported students email header cell*/
+                {/*defines reported students email header cell*/}
                   <th>
                     Reported Student's Email
                   </th>
-                  /*defines claims header cell*/
+                  {/*defines claims header cell*/}
                   <th>
                     Student who made the claim
                   </th>
                   <th>
-                  /*defines claim status header cell*/
+                  {/*defines claim status header cell*/}
                     Student who made the claim's status
                   </th>
-                  /*defines the reason header cell*/
+                  {/*defines the reason header cell*/}
                   <th>
                     Reason
                   </th>
-                  /*defines the violated code of conduct (boolean) header cell*/
+                  {/*defines the violated code of conduct (boolean) header cell*/}
                   <th>
                     Violated code of conduct?
                   </th>
-                  /*defines the reassign students (boolean) header cell*/
+                  {/*defines the reassign students (boolean) header cell*/}
                   <th>
                     Reassign the student?
                   </th>
                 </thead>
                 <tbody>
                   <tr>
-                  /*rows in table*/
+                  {/*rows in table*/}
                     <td>
                         example@kcl.ac.uk
                     </td>

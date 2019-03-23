@@ -1,52 +1,51 @@
-/* Admins only, purpose is to view students who are currently unpaired and
-    to manually pair them with a mentor /*
-
-/*eslint-disable*/
+{/*eslint-disable*/}
 import React from "react";
 import { Card, CardHeader, CardBody, CardTitle, Row, Col, Table } from "reactstrap";
 
 import Button from "components/CustomButton/CustomButton.jsx";
 import FormInputs from "components/FormInputs/FormInputs.jsx"
 
+{/* Admins only, purpose is to view students who are currently unpaired and
+    to manually pair them with a mentor */}
 class AssignStudents extends React.Component {
   render() {
     return (
       <div className="content">
       <Row>
-    /*sets the column size for card*/
+      {/*sets the column size for card*/}
         <Col md={10} xs={10}>
           <Card className="card-user">
-          /*section where admins are able to manually assign mentors with mentees by manually inputting mentor and mentee emails*/
+          {/*section where admins are able to manually assign mentors with mentees by manually inputting mentor and mentee emails*/}
             <CardHeader>
               <CardTitle>Manually Assign Mentor with Mentee</CardTitle>
             </CardHeader>
             <CardBody>
               <form>
+              {/*admin manually inputs mentor email to be assigned with mentee*/}
+              {/*example email that is seen by user*/}
+              {/*admin manually inputs mentee email to be assigned with mentor*/}
+              {/*example email that is seen by user*/}
               <FormInputs
               ncols = {["col-md-5 pr-1" , "col-md-5 pr-1" ]}
               proprieties = {[
                   {
-                    /*admin manually inputs mentor email to be assigned with mentee*/
                       label : "Mentor Email Address",
                       inputProps : {
-                        /*example email that is seen by user*/
                           type : "email",
                           defaultValue: "example@kcl.ac.uk"
                       }
                   },
                   {
-                    /*admin manually inputs mentee email to be assigned with mentor*/
                       label : "Mentee Email Address",
                       inputProps : {
                           type : "email",
-                          /*example email that is seen by user*/
                           placeholder: "example@kcl.ac.uk"
                       }
                   }
               ]}
           />
                 <Row>
-                /*Update button to assign mentor with mentee*/
+                {/*Update button to assign mentor with mentee*/}
                   <div className="update ml-auto mr-auto">
                     <Button color="primary" round>Update </Button>
                   </div>
@@ -55,9 +54,9 @@ class AssignStudents extends React.Component {
             </CardBody>
           </Card>
         </Col>
-        /*sets the column size for card
+        {/*sets the column size for card*/}
         <Col xs={10}>
-        /*a list of students who are yet to be assigned*/
+        {/*a list of students who are yet to be assigned*/}
             <Card>
               <CardHeader>
                 <CardTitle tag="h4">Students to be assigned</CardTitle>
@@ -65,11 +64,11 @@ class AssignStudents extends React.Component {
               <CardBody>
               <Table responsive>
                 <thead className=" text-primary">
-                /*defines name header cell*/
+                {/*defines name header cell*/}
                   <th>
                     Email
                   </th>
-                  /*defines email header cell*/
+                  {/*defines email header cell*/}
                   <th>
                     First Name
                   </th>
@@ -97,19 +96,18 @@ class AssignStudents extends React.Component {
                   <th>
                     Year
                   </th>
-                  /*defines gender header cell*/
+                  {/*defines gender header cell*/}
                   <th>
                     Gender
                   </th>
                   <th>
                     Prefer same gender?
-                  /*defines interests header cell*/
-                  <th className="text-right">
+                  {/*defines interests header cell*/}
                     Interests
                     </th>
                    </thead>
                    <tbody>
-                   /*rows in table*/
+                   {/*rows in table*/}
                      <tr>
                        <td>
                          k1763918@kcl.ac.uk

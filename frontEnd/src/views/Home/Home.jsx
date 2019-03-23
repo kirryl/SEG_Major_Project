@@ -16,7 +16,7 @@ class Home extends React.Component {
     <h2 className="title">King's College London Student Buddy System</h2>
     </CardBody>
           <Row>
-          /*sets the column size for card*/
+          {/*sets the column size for card*/}
           <Col md={9}>
           <blockquote className="blockquote">
           <p className="mb-0">
@@ -34,7 +34,7 @@ class Home extends React.Component {
         </CardBody>
         </Row>
         <Row>
-        /*medium*/
+      {/*medium*/}
         <Col md={3}>
           <Card className="text-center">
             <CardBody>
@@ -43,7 +43,7 @@ class Home extends React.Component {
             </CardBody>
           </Card>
         </Col>
-        /*medium*/
+        {/*medium*/}
         <Col md={3}>
         <Card className="text-center">
             <CardBody>

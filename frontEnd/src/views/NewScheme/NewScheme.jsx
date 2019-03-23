@@ -1,4 +1,4 @@
-/*eslint-disable*/
+{/*eslint-disable*/}
 import React from "react";
 import { Card, CardHeader, CardBody, CardTitle, Row, Col, FormGroup, Label, Input, Table } from "reactstrap";
 
@@ -10,9 +10,9 @@ class NewScheme extends React.Component {
     return (
     <div className="content">
       <Row>
-      /*sets the column size for card*/
+      {/*sets the column size for card*/}
         <Col md={10} xs={12}>
-        /*centers the text contained in the card*/
+        {/*centers the text contained in the card*/}
         <Card className="text-left">
           <CardBody>
           <h5>10 Days until end of registration</h5>
@@ -151,14 +151,14 @@ class NewScheme extends React.Component {
           </Col>
         </Row>
     <Row>
-      /*sets the column size for card*/
+      {/*sets the column size for card*/}
           <Col md={10} xs={12}>
             <Card className="card-user">
               <CardHeader>
                 <CardTitle>Start a new scheme</CardTitle>
               </CardHeader>
               <CardBody>
-              /*form to input the information to create a new scheme*/
+              {/*form to input the information to create a new scheme*/}
                 <form>
                   <FormInputs
                     ncols={["col-md-7 pr-1"]}

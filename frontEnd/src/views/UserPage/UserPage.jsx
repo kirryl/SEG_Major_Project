@@ -1,6 +1,3 @@
-/* Student is able to view their personal profile with their personal details.
-    The details on the user's profile can be viewed by their mentor*/
-
 import React from "react";
 import { Card, CardHeader, CardBody, CardTitle, Row, Col } from "reactstrap";
 
@@ -11,20 +8,22 @@ import Button from "components/CustomButton/CustomButton.jsx";
 import damirBosnjak from "assets/img/damir-bosnjak.jpg";
 import mike from "assets/img/mike.jpg";
 
+{/* Student is able to view their personal profile with their personal details.
+    The details on the user's profile can be viewed by their mentor*/}
 class User extends React.Component {
   render() {
     return (
       <div className="content">
         <Row>
-         /*sets the column size for card, far left of page*/
+         {/*sets the column size for card, far left of page*/}
           <Col md={4} xs={12}>
             <Card className="card-user">
               <div className="image">
-              /*profile picture*/
+              {/*profile picture*/}
                 <img src={damirBosnjak} alt="..." />
               </div>
               <CardBody>
-              /*name and email*/
+              {/*name and email*/}
                 <CardAuthor
                   avatar={mike}
                   avatarAlt="..."
@@ -38,17 +37,17 @@ class User extends React.Component {
             </Card>
           </Col>
 
-          /*sets the column size for the card*/
+          {/*sets the column size for the card*/}
           <Col md={8} xs={12}>
             <Card className="card-user">
               <CardHeader>
                 <CardTitle>Edit Profile</CardTitle>
               </CardHeader>
               <CardBody>
-              /*edit profile form*/
+              {/*edit profile form*/}
                 <form>
+                {/* medium column */}
                   <FormInputs
-                  /* medium column */
                     ncols={["col-md-5 pr-1"]}
                     proprieties={[
                       {
@@ -61,7 +60,7 @@ class User extends React.Component {
                       },
                     ]}
                   />
-                  /*3 inputs on 1 line*/
+                  {/*3 inputs on 1 line*/}
                   <FormInputs
                     ncols={["col-md-4 pr-1", "col-md-4 pr-1", "col-md-4 pl-1"]}
                     proprieties={[
@@ -93,7 +92,7 @@ class User extends React.Component {
                       }
                     ]}
                   />
-                  /*fits whole length of card*/
+                  {/*fits whole length of card*/}
                   <FormInputs
                     ncols={["col-md-12"]}
                     proprieties={[
@@ -106,7 +105,7 @@ class User extends React.Component {
                       },
                     ]}
                   />
-                  /*fits whole length of card*/
+                  {/*fits whole length of card*/}
                   <FormInputs
                     ncols={["col-md-12"]}
                     proprieties={[
@@ -121,7 +120,7 @@ class User extends React.Component {
                       }
                     ]}
                   />
-                  /*fits whole length of card*/
+                  {/*fits whole length of card*/}
                   <FormInputs
                     ncols={["col-md-12"]}
                     proprieties={[
@@ -136,7 +135,7 @@ class User extends React.Component {
                       }
                     ]}
                   />
-                  /*fits whole length of card*/
+                  {/*fits whole length of card*/}
                   <FormInputs
                     ncols={["col-md-12"]}
                     proprieties={[
@@ -151,7 +150,7 @@ class User extends React.Component {
                       }
                     ]}
                   />
-                  /*fits whole length of card*/
+                  {/*fits whole length of card*/}
                   <FormInputs
                     ncols={["col-md-12"]}
                     proprieties={[
@@ -166,7 +165,7 @@ class User extends React.Component {
                       }
                     ]}
                   />
-                  /*fits whole length of card*/
+                  {/*fits whole length of card*/}
                   <FormInputs
                     ncols={["col-md-12"]}
                     proprieties={[
@@ -183,7 +182,7 @@ class User extends React.Component {
                   />
                   <Row>
                     <div className="update ml-auto mr-auto">
-                    /* update profile button */
+                    {/* update profile button */}
                       <Button color="primary" round>Update Profile</Button>
                     </div>
                   </Row>

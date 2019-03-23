@@ -1,5 +1,3 @@
-/*custom button - can be used by importing*/
-
 import React, { Component } from "react";
 import { Button } from "reactstrap";
 // used to make this component's props into classes
