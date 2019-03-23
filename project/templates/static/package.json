@@ -7,7 +7,25 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack -p --progress --config webpack.config.js",
     "dev-build": "webpack --progress -d --config webpack.config.js",
-    "watch": "webpack --progress -d --config webpack.config.js --watch"
+    "watch": "webpack --progress -d --config webpack.config.js --watch",
+    "errorw": "webpack --progress -d --config webpack.config.js --color --watch --display-error-details"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "optionalDependencies": {
+    "eslint-config-prettier": "^3.1.0",
+    "eslint-plugin-prettier": "^3.0.0",
+    "ajv": "6.0.0",
+    "@types/googlemaps": "3.30.13",
+    "@types/markerclustererplus": "2.1.33",
+    "jquery": "3.3.1"
   },
   "author": "",
   "license": "ISC",
@@ -24,7 +42,28 @@
     "webpack-cli": "^3.3.0"
   },
   "dependencies": {
-    "history": "^4.9.0",
-    "react-router-dom": "^5.0.0"
+    "history": "4.7.2",
+    "react-router-dom": "4.3.1",
+    "@types/react": "^15.6.6",
+    "@types/jest": "^18.1.1",
+    "@types/node": "^7.0.5",
+    "@types/react-dom": "^0.14.22",
+    "@types/react-redux": "^4.4.36",
+    "bootstrap": "4.1.3",
+    "chart.js": "2.7.2",
+    "node-sass": "4.9.3",
+    "perfect-scrollbar": "1.4.0",
+    "react": "16.5.2",
+    "react-chartjs-2": "2.7.4",
+    "react-dom": "16.5.2",
+    "react-google-maps": "9.4.5",
+    "react-notification-alert": "0.0.8",
+    "react-scripts": "^2.1.5",
+    "reactstrap": "6.5.0",
+    "enzyme": "^3.0.0",
+    "react-redux": "^5.0.2",
+    "redux": "^3.6.0",
+    "enzyme-adapter-react-16": "^1.0.2",
+    "@types/enzyme": "^3.1.0"
   }
 }
