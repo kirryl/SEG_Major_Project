@@ -19,6 +19,24 @@ Use [this](https://demos.creative-tim.com/paper-dashboard-react/#/documentation/
 
 # Backend
 
+## To run project do the following
+
+Terminal One (For React bundling)
+```
+cd project/templates/static
+npm run watch
+```
+Terminal Two (For Flask)
+```
+cd (root)
+source env/bin/activate
+python run.py
+```
+
+
+<------- EVERYTHING BELOW IS OUTDATED -------->
+
+
 To install the react-flask boilerplate and start working on it, follow the steps provided below. 
 
 1. Clone this repository and checkout to branch backend_bambi.
