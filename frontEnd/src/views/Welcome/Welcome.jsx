@@ -16,7 +16,7 @@ class Welcome extends React.Component {
     return (
       <div className="content">
           <Row>
-          <a href="https://keats.kcl.ac.uk/my/"><img src={logo} alt="KCL Logo" width="160" height="130" style={{ float:`right` }}></img></a>
+          <a href="https://keats.kcl.ac.uk/my/"><img src={logo} alt="KCL Logo" width="160" height="122" style={{ float:`right` }}></img></a>
           <Col md={9}>
           <blockquote className="blockquote">
           <p className="mb-0">
@@ -41,18 +41,18 @@ class Welcome extends React.Component {
         </CardBody>
         </Row>
         <Row>
-        <Col md={3}>
+        <Col md={4}>
           <Card className="text-center">
             <CardBody>
-            <h4>KCL Student</h4>
+            <h4>Current Student</h4>
             <Button href="./RegisterForm" color="primary">Sign-up</Button>
             </CardBody>
           </Card>
         </Col>
-        <Col md={3}>
+        <Col md={4}>
         <Card className="text-center">
             <CardBody>
-            <h4>Freshers</h4>
+            <h4>Prospective Student</h4>
             <Button color="primary">Sign-up</Button>
             </CardBody>
           </Card>
@@ -60,14 +60,13 @@ class Welcome extends React.Component {
         </Row>
         <Row>
         <CardBody>
-        
         <h4 className="title">
         Want to know more? - Read our FAQs!
         </h4>
         </CardBody>
         </Row>
           {/*individual cards for each faq*/}
-            <Col md={7}>
+            <Col md={8}>
             <Card className="text-left">
               <CardBody>
               <h6>What am I allowed to talk about?</h6>
@@ -79,7 +78,7 @@ class Welcome extends React.Component {
               </CardBody>
             </Card>
             </Col>
-            <Col md={7}>
+            <Col md={8}>
             <Card className="text-left">
               <CardBody>
               <h6>How long does the buddy system last?</h6>
@@ -91,7 +90,7 @@ class Welcome extends React.Component {
               </CardBody>
             </Card>
             </Col> 
-            <Col md={7}>
+            <Col md={8}>
             <Card className="text-left">
               <CardBody>
               <h6>Can my friends from other department join?</h6>
@@ -101,7 +100,7 @@ class Welcome extends React.Component {
               </CardBody>
             </Card>
             </Col>                        
-            <Col md={7}>
+            <Col md={8}>
             <Card className="text-left">
               <CardBody>
               <h6>Me and my buddy cannot get along at all, What should I do?</h6>
@@ -113,7 +112,7 @@ class Welcome extends React.Component {
               </CardBody>
             </Card>
             </Col>
-            <Col md={7}>
+            <Col md={8}>
             <Card className="text-left">
               <CardBody>
               <h6>In what case can I report my buddy?</h6>
@@ -125,7 +124,7 @@ class Welcome extends React.Component {
               </CardBody>
             </Card>
             </Col>
-            <Col md={7}>
+            <Col md={8}>
             <Card className="text-left">
               <CardBody>
               <h6>I want to report my buddy</h6>
@@ -136,8 +135,8 @@ class Welcome extends React.Component {
               </CardBody>
             </Card>
           </Col>
-          <Col md={7}>
-              <p>If you have any further questions please email us at ug-informatics@kcl.ac.uk</p>
+          <Col md={8}>
+              <p>If you have any further questions please email us at <a href="mailto:ug-informatics@kcl.ac.uk">ug-informatics@kcl.ac.uk</a></p>
           </Col>
       </div>
 
