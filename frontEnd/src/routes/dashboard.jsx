@@ -1,4 +1,4 @@
-import Home from "views/Home/Home.jsx";
+import Welcome from "views/Welcome/Welcome.jsx";
 import MyBuddy from "views/myBuddy/myBuddy.jsx";
 import UserPage from "views/UserPage/UserPage.jsx";
 import RegisterForm from "views/RegisterForm/RegisterForm.jsx";
@@ -10,9 +10,9 @@ import NewScheme from "views/NewScheme/NewScheme.jsx";
 
 var dashRoutes = [
   {
-    path: "/home",
-    name: "King's College London Student Buddy System",
-    component: Home
+    path: "/Welcome",
+    name: "Welcome",
+    component: Welcome
   },
   {
     path: "/myBuddy",
@@ -49,7 +49,12 @@ var dashRoutes = [
     name: "Create a new scheme",
     component: NewScheme
   },
+  {
+    path: "/RegisterForm",
+    name: "Sign Up Form",
+    component: RegisterForm
+  },
 
-  { redirect: true, path: "/", pathTo: "/home", name: "Home" }
+  { redirect: true, path: "/", pathTo: "/Welcome", name: "Welcome" }
 ];
 export default dashRoutes;

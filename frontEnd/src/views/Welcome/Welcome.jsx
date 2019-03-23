@@ -9,26 +9,28 @@ import {
 
 import Button from "components/CustomButton/CustomButton.jsx";
 import landing from "assets/img/landing.jpg";
+import logo from "assets/img/kcl-logo.png";
 
-class Home extends React.Component {
+class Welcome extends React.Component {
   render() {
     return (
       <div className="content">
           <Row>
+          <a href="https://keats.kcl.ac.uk/my/"><img src={logo} alt="KCL Logo" width="160" height="130" style={{ float:`right` }}></img></a>
           <Col md={9}>
           <blockquote className="blockquote">
           <p className="mb-0">
             The student buddy scheme is an informal support scheme to help students in the department network across all different years.
             It has been designed for the use of King's College London students.
             <br></br>
-            -For non-KCL student, student who has yet have a KCL email please sign-up through freshers button-
+            -For non-KCL student / student who has yet have a KCL email please sign-up through freshers button-
           </p>
           </blockquote>
         </Col>
         </Row>
         <Row>
         <Col md={10}>
-        <Card style={{width: '52rem'}}>
+        <Card style={{width: '62rem'}}>
             <CardImg top src={landing} alt="..." />
         </Card>
         </Col>
@@ -58,7 +60,10 @@ class Home extends React.Component {
         </Row>
         <Row>
         <CardBody>
-        <h4 className="title">Want to know more?</h4>
+        
+        <h4 className="title">
+        Want to know more? - Read our FAQs!
+        </h4>
         </CardBody>
         </Row>
           {/*individual cards for each faq*/}
@@ -131,11 +136,12 @@ class Home extends React.Component {
               </CardBody>
             </Card>
           </Col>
+          <Col md={7}>
+              <p>If you have any further questions please email us at ug-informatics@kcl.ac.uk</p>
+          </Col>
       </div>
 
     )
   };
 }
-
-
-export default Home;
+export default Welcome;
