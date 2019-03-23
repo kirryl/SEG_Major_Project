@@ -53,7 +53,7 @@ class Welcome extends React.Component {
         <Card className="text-center">
             <CardBody>
             <h4>Prospective Student</h4>
-            <Button color="primary">Sign-up</Button>
+            <Button href="./RegisterForm" color="primary">Sign-up</Button>
             </CardBody>
           </Card>
         </Col>

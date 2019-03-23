@@ -35,7 +35,7 @@ class Sidebar extends React.Component {
          <div className="logo">
           <a className="simple-text" 
           href="."
-          > KCL Student Buddy
+          > Student Buddy Scheme
           </a>
           </div>
 
