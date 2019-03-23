@@ -1,12 +1,12 @@
-{/*eslint-disable*/}
+/*eslint-disable*/
 import React from "react";
 import { Card, CardHeader, CardBody, CardTitle, Row, Col, Table } from "reactstrap";
 
 import Button from "components/CustomButton/CustomButton.jsx";
 import FormInputs from "components/FormInputs/FormInputs.jsx"
 
-{/* Admins only, purpose is to view students who are currently unpaired and
-    to manually pair them with a mentor */}
+/* Admins only, purpose is to view students who are currently unpaired and
+    to manually pair them with a mentor */
 class AssignStudents extends React.Component {
   render() {
     return (

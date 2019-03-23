@@ -1,7 +1,7 @@
-{/* admin only- view students who have been reported and verify freshers who sign up with
-    personal email address */}
+/* admin only- view students who have been reported and verify freshers who sign up with
+    personal email address */
 
-{/*eslint-disable*/}
+/*eslint-disable*/
 import React from "react";
 import { Card, CardHeader, CardBody, CardTitle, Row, Col, Table, FormGroup,
   Label, Input } from "reactstrap";

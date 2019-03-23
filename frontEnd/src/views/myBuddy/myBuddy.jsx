@@ -1,4 +1,4 @@
-{/*eslint-disable*/}
+/*eslint-disable*/
 import React from "react";
 import {
   Card, CardHeader, CardBody, CardTitle, Row, Col, FormGroup, Label, Input

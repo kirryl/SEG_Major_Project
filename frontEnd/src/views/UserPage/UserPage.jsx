@@ -8,8 +8,8 @@ import Button from "components/CustomButton/CustomButton.jsx";
 import damirBosnjak from "assets/img/damir-bosnjak.jpg";
 import mike from "assets/img/mike.jpg";
 
-{/* Student is able to view their personal profile with their personal details.
-    The details on the user's profile can be viewed by their mentor*/}
+/* Student is able to view their personal profile with their personal details.
+    The details on the user's profile can be viewed by their mentor*/
 class User extends React.Component {
   render() {
     return (

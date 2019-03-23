@@ -7,7 +7,7 @@ import { Card, CardHeader, CardBody, CardTitle, Row, Col,
 import Button from "components/CustomButton/CustomButton.jsx";
 import FormInputs from "components/FormInputs/FormInputs.jsx";
 
-{/*form for students to input their interests*/}
+/*form for students to input their interests*/
 
 class RegisterForm extends React.Component {
   render() {
