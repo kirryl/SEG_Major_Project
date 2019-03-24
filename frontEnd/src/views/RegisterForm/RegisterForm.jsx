@@ -6,10 +6,67 @@ import { Card, CardHeader, CardBody, CardTitle, Row, Col,
 
 import Button from "components/CustomButton/CustomButton.jsx";
 import FormInputs from "components/FormInputs/FormInputs.jsx";
+import Select from "components/Select/Select.jsx";
+
+class RegisterForm extends React.Component {
+  constructor(props){
+    super(props);
+
+    this.state = {
+      newUser: {
+        prefName: ''
+      },
+
+      yearOfStudy: ['First','Second','Third','Fourth','Freshers'],
+      gender: ['Female', 'Male', 'Prefer not to say'],
+      interest1: ['Athletics','Chess','Boxing','Martial arts','Ice Hockey','Rock Climbing','Ice skating','Hockey','Football','Rugby','Tennis','Cricket','Baseball','Table tennis','Acrobatics','Jazz','Pop','Techno','Indie','Sci-fi','Pottery','Sowing','Baking','Cooking','Yoga','Books','Rock','Trainspotting','PC gaming','Strategy','Bowling','Golf','Pool','Go','Card games','Toguz korgool','Pokemon','Tabletop','Console gaming','Photography','Fine art','Graphics','Dance','Filmography','Design','Fashion','Architecture','AI','Security','Software engineering','Electronic engineering','Fintech','Virtual reality','Marketing','Quantum computing','Digital transformation','Web development','Telecommunications','German','Korean','Lahnda','Javanese','Bengali','Arabic','Spanish','Portugese','Hindi','Economics','Philosophy','Psycology','Literature','History','Law','Geography','Medicine','Biological sciences','Chemistry','Physics','Mathematics','Gender equality','LGBTQ+','Memes','Cats','Dogs','Investment','Travel','Environmental protection','Political debate'],
+      interest2: ['Athletics','Chess','Boxing','Martial arts','Ice Hockey','Rock Climbing','Ice skating','Hockey','Football','Rugby','Tennis','Cricket','Baseball','Table tennis','Acrobatics','Jazz','Pop','Techno','Indie','Sci-fi','Pottery','Sowing','Baking','Cooking','Yoga','Books','Rock','Trainspotting','PC gaming','Strategy','Bowling','Golf','Pool','Go','Card games','Toguz korgool','Pokemon','Tabletop','Console gaming','Photography','Fine art','Graphics','Dance','Filmography','Design','Fashion','Architecture','AI','Security','Software engineering','Electronic engineering','Fintech','Virtual reality','Marketing','Quantum computing','Digital transformation','Web development','Telecommunications','German','Korean','Lahnda','Javanese','Bengali','Arabic','Spanish','Portugese','Hindi','Economics','Philosophy','Psycology','Literature','History','Law','Geography','Medicine','Biological sciences','Chemistry','Physics','Mathematics','Gender equality','LGBTQ+','Memes','Cats','Dogs','Investment','Travel','Environmental protection','Political debate'],
+      interest3: ['Athletics','Chess','Boxing','Martial arts','Ice Hockey','Rock Climbing','Ice skating','Hockey','Football','Rugby','Tennis','Cricket','Baseball','Table tennis','Acrobatics','Jazz','Pop','Techno','Indie','Sci-fi','Pottery','Sowing','Baking','Cooking','Yoga','Books','Rock','Trainspotting','PC gaming','Strategy','Bowling','Golf','Pool','Go','Card games','Toguz korgool','Pokemon','Tabletop','Console gaming','Photography','Fine art','Graphics','Dance','Filmography','Design','Fashion','Architecture','AI','Security','Software engineering','Electronic engineering','Fintech','Virtual reality','Marketing','Quantum computing','Digital transformation','Web development','Telecommunications','German','Korean','Lahnda','Javanese','Bengali','Arabic','Spanish','Portugese','Hindi','Economics','Philosophy','Psycology','Literature','History','Law','Geography','Medicine','Biological sciences','Chemistry','Physics','Mathematics','Gender equality','LGBTQ+','Memes','Cats','Dogs','Investment','Travel','Environmental protection','Political debate'],
+      interest4: ['Athletics','Chess','Boxing','Martial arts','Ice Hockey','Rock Climbing','Ice skating','Hockey','Football','Rugby','Tennis','Cricket','Baseball','Table tennis','Acrobatics','Jazz','Pop','Techno','Indie','Sci-fi','Pottery','Sowing','Baking','Cooking','Yoga','Books','Rock','Trainspotting','PC gaming','Strategy','Bowling','Golf','Pool','Go','Card games','Toguz korgool','Pokemon','Tabletop','Console gaming','Photography','Fine art','Graphics','Dance','Filmography','Design','Fashion','Architecture','AI','Security','Software engineering','Electronic engineering','Fintech','Virtual reality','Marketing','Quantum computing','Digital transformation','Web development','Telecommunications','German','Korean','Lahnda','Javanese','Bengali','Arabic','Spanish','Portugese','Hindi','Economics','Philosophy','Psycology','Literature','History','Law','Geography','Medicine','Biological sciences','Chemistry','Physics','Mathematics','Gender equality','LGBTQ+','Memes','Cats','Dogs','Investment','Travel','Environmental protection','Political debate'],
+      interest5: ['Athletics','Chess','Boxing','Martial arts','Ice Hockey','Rock Climbing','Ice skating','Hockey','Football','Rugby','Tennis','Cricket','Baseball','Table tennis','Acrobatics','Jazz','Pop','Techno','Indie','Sci-fi','Pottery','Sowing','Baking','Cooking','Yoga','Books','Rock','Trainspotting','PC gaming','Strategy','Bowling','Golf','Pool','Go','Card games','Toguz korgool','Pokemon','Tabletop','Console gaming','Photography','Fine art','Graphics','Dance','Filmography','Design','Fashion','Architecture','AI','Security','Software engineering','Electronic engineering','Fintech','Virtual reality','Marketing','Quantum computing','Digital transformation','Web development','Telecommunications','German','Korean','Lahnda','Javanese','Bengali','Arabic','Spanish','Portugese','Hindi','Economics','Philosophy','Psycology','Literature','History','Law','Geography','Medicine','Biological sciences','Chemistry','Physics','Mathematics','Gender equality','LGBTQ+','Memes','Cats','Dogs','Investment','Travel','Environmental protection','Political debate']
+    }
+
+    this.handleFormSubmit = this.handleFormSubmit.bind(this);
+    this.handleClearForm = this.handleClearForm.bind(this);
+  }
+
+  handleFormSubmit(e) {
+      e.preventDefault();
+      let userData = this.state.newUser;
+
+      fetch('  ',{
+          method: "POST",
+          body: JSON.stringify(userData),
+          headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+          },
+        }).then(response => {
+          response.json().then(data =>{
+            console.log("Successful" + data);
+          })
+      })
+    }
+
+    handleClearForm(e) {
+
+          e.preventDefault();
+          this.setState({
+            newUser: {
+              prefName: '',
+              yearOfStudy: [],
+              gender: [],
+              interest1: [],
+              interest2: [],
+              interest3: [],
+              interest4: [],
+              interest5: []
+            },
+          })
+      }
 
 /*form for students to input their interests*/
 
-class RegisterForm extends React.Component {
   render() {
     return (
       <div className="content">
@@ -21,7 +78,7 @@ class RegisterForm extends React.Component {
                 <CardTitle></CardTitle>
               </CardHeader>
               <CardBody>
-                <form>
+                <form className = "container" onSubmit = {this.handleFormSubmit}>
                   <FormInputs
                     ncols={["col-md-5 pr-1"]}
                     proprieties={[
@@ -67,7 +124,8 @@ class RegisterForm extends React.Component {
                     ]}
                   />
                 {/*year of study*/}
-                <FormGroup className="col-md-4">
+
+                {/*<FormGroup className="col-md-4">
                     <Label for="inputState">Year of Study</Label>
                     <Input type="select" name="select" id="inputState" >
                     <option>Choose...</option>
@@ -77,9 +135,18 @@ class RegisterForm extends React.Component {
                     <option>Fourth</option>
                     <option>Freshers</option>
                     </Input>
-                </FormGroup>
+                </FormGroup>*/}
+
+                <Select yearOfStudy = {'Year of study'}
+                    name = {'yearOfStudy'}
+                    options = {this.state.yearOfStudyOptions}
+                    value = {this.state.newUser.yearOfStudy}
+                    placeholder = {'Select your year of study'}
+                    handleChange = {this.handleInput}
+                />
+
                 {/*gender*/}
-                                <FormGroup className="col-md-4">
+                                {/*}<FormGroup className="col-md-4">
                     <Label for="inputState">Gender</Label>
                     <Input type="select" name="select" id="inputState" >
                     <option>Choose...</option>
@@ -96,7 +163,15 @@ class RegisterForm extends React.Component {
                     <span className="check"></span>
                     </span>
                 </Label>
-                </FormGroup>
+                </FormGroup>*/}
+              <Select title={'Gender'}
+                   name={'gender'}
+                   options = {this.state.genderOptions}
+                   value = {this.state.newUser.gender}
+                   placeholder = {'Select Gender'}
+                   handleChange = {this.handleInput}
+              />
+
                 <FormGroup>
                     {/*user selects from dropdown list*/}
                     <Label for="exampleSelect1">Interest 1</Label>
