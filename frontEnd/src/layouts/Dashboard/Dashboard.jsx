@@ -7,6 +7,7 @@ import Header from "components/Header/Header.jsx";
 import Footer from "components/Footer/Footer.jsx";
 import Sidebar from "components/Sidebar/Sidebar.jsx";
 
+// Set dashboard as the landing-dashboard which only has the welcome page
 import dashboardRoutes from "routes/landing-dashboard.jsx";
 
 var ps;
