@@ -7,7 +7,7 @@ import Header from "components/Header/Header.jsx";
 import Footer from "components/Footer/Footer.jsx";
 import Sidebar from "components/Sidebar/Sidebar.jsx";
 
-import dashboardRoutes from "routes/dashboard.jsx";
+import dashboardRoutes from "routes/landing-dashboard.jsx";
 
 var ps;
 

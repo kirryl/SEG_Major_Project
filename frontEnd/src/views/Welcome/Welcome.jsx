@@ -23,7 +23,7 @@ class Welcome extends React.Component {
             The student buddy scheme is an informal support scheme to help students in the department network across all different years.
             It has been designed for the use of King's College London students.
             <br></br>
-            -For non-KCL student / student who has yet have a KCL email please sign-up through freshers button-
+            -For non-KCL student or who has yet have a KCL email please sign-up through freshers button-
           </p>
           </blockquote>
         </Col>
@@ -37,7 +37,7 @@ class Welcome extends React.Component {
         </Row>
         <Row>
         <CardBody>
-        <h4 className="title">Get Started</h4>
+        <h4 className="title">Get Started - Sign up here!</h4>
         </CardBody>
         </Row>
         <Row>
