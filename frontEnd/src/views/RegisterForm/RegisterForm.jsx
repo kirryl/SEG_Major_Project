@@ -6,79 +6,156 @@ import { Card, CardHeader, CardBody, CardTitle, Row, Col,
 
 import Button from "components/CustomButton/CustomButton.jsx";
 import FormInputs from "components/FormInputs/FormInputs.jsx";
-import Select from "components/Select/Select.jsx";
+import Select from "react-select";
 
-class RegisterForm extends React.Component {
-  constructor(props){
-    super(props);
+    const yearOfStudy = [
+      {label: "First", value: 1},
+      {label: "Second", value: 2},
+      {label: "Third", value: 3},
+      {label: "Fourth", value: 4},
+      {label: "Fresher", value: 5},
+    ];
 
-    this.state = {
-      newUser: {
-        prefName: ''
-      },
+    const gender = [
+      {label: "Female", value: 1},
+      {label: "Male", value: 2},
+      {label: "Prefer not to say", value: 3},
+    ];
 
-      yearOfStudy: ['First','Second','Third','Fourth','Freshers'],
-      gender: ['Female', 'Male', 'Prefer not to say'],
-      interest1: ['Athletics','Chess','Boxing','Martial arts','Ice Hockey','Rock Climbing','Ice skating','Hockey','Football','Rugby','Tennis','Cricket','Baseball','Table tennis','Acrobatics','Jazz','Pop','Techno','Indie','Sci-fi','Pottery','Sowing','Baking','Cooking','Yoga','Books','Rock','Trainspotting','PC gaming','Strategy','Bowling','Golf','Pool','Go','Card games','Toguz korgool','Pokemon','Tabletop','Console gaming','Photography','Fine art','Graphics','Dance','Filmography','Design','Fashion','Architecture','AI','Security','Software engineering','Electronic engineering','Fintech','Virtual reality','Marketing','Quantum computing','Digital transformation','Web development','Telecommunications','German','Korean','Lahnda','Javanese','Bengali','Arabic','Spanish','Portugese','Hindi','Economics','Philosophy','Psycology','Literature','History','Law','Geography','Medicine','Biological sciences','Chemistry','Physics','Mathematics','Gender equality','LGBTQ+','Memes','Cats','Dogs','Investment','Travel','Environmental protection','Political debate'],
-      interest2: ['Athletics','Chess','Boxing','Martial arts','Ice Hockey','Rock Climbing','Ice skating','Hockey','Football','Rugby','Tennis','Cricket','Baseball','Table tennis','Acrobatics','Jazz','Pop','Techno','Indie','Sci-fi','Pottery','Sowing','Baking','Cooking','Yoga','Books','Rock','Trainspotting','PC gaming','Strategy','Bowling','Golf','Pool','Go','Card games','Toguz korgool','Pokemon','Tabletop','Console gaming','Photography','Fine art','Graphics','Dance','Filmography','Design','Fashion','Architecture','AI','Security','Software engineering','Electronic engineering','Fintech','Virtual reality','Marketing','Quantum computing','Digital transformation','Web development','Telecommunications','German','Korean','Lahnda','Javanese','Bengali','Arabic','Spanish','Portugese','Hindi','Economics','Philosophy','Psycology','Literature','History','Law','Geography','Medicine','Biological sciences','Chemistry','Physics','Mathematics','Gender equality','LGBTQ+','Memes','Cats','Dogs','Investment','Travel','Environmental protection','Political debate'],
-      interest3: ['Athletics','Chess','Boxing','Martial arts','Ice Hockey','Rock Climbing','Ice skating','Hockey','Football','Rugby','Tennis','Cricket','Baseball','Table tennis','Acrobatics','Jazz','Pop','Techno','Indie','Sci-fi','Pottery','Sowing','Baking','Cooking','Yoga','Books','Rock','Trainspotting','PC gaming','Strategy','Bowling','Golf','Pool','Go','Card games','Toguz korgool','Pokemon','Tabletop','Console gaming','Photography','Fine art','Graphics','Dance','Filmography','Design','Fashion','Architecture','AI','Security','Software engineering','Electronic engineering','Fintech','Virtual reality','Marketing','Quantum computing','Digital transformation','Web development','Telecommunications','German','Korean','Lahnda','Javanese','Bengali','Arabic','Spanish','Portugese','Hindi','Economics','Philosophy','Psycology','Literature','History','Law','Geography','Medicine','Biological sciences','Chemistry','Physics','Mathematics','Gender equality','LGBTQ+','Memes','Cats','Dogs','Investment','Travel','Environmental protection','Political debate'],
-      interest4: ['Athletics','Chess','Boxing','Martial arts','Ice Hockey','Rock Climbing','Ice skating','Hockey','Football','Rugby','Tennis','Cricket','Baseball','Table tennis','Acrobatics','Jazz','Pop','Techno','Indie','Sci-fi','Pottery','Sowing','Baking','Cooking','Yoga','Books','Rock','Trainspotting','PC gaming','Strategy','Bowling','Golf','Pool','Go','Card games','Toguz korgool','Pokemon','Tabletop','Console gaming','Photography','Fine art','Graphics','Dance','Filmography','Design','Fashion','Architecture','AI','Security','Software engineering','Electronic engineering','Fintech','Virtual reality','Marketing','Quantum computing','Digital transformation','Web development','Telecommunications','German','Korean','Lahnda','Javanese','Bengali','Arabic','Spanish','Portugese','Hindi','Economics','Philosophy','Psycology','Literature','History','Law','Geography','Medicine','Biological sciences','Chemistry','Physics','Mathematics','Gender equality','LGBTQ+','Memes','Cats','Dogs','Investment','Travel','Environmental protection','Political debate'],
-      interest5: ['Athletics','Chess','Boxing','Martial arts','Ice Hockey','Rock Climbing','Ice skating','Hockey','Football','Rugby','Tennis','Cricket','Baseball','Table tennis','Acrobatics','Jazz','Pop','Techno','Indie','Sci-fi','Pottery','Sowing','Baking','Cooking','Yoga','Books','Rock','Trainspotting','PC gaming','Strategy','Bowling','Golf','Pool','Go','Card games','Toguz korgool','Pokemon','Tabletop','Console gaming','Photography','Fine art','Graphics','Dance','Filmography','Design','Fashion','Architecture','AI','Security','Software engineering','Electronic engineering','Fintech','Virtual reality','Marketing','Quantum computing','Digital transformation','Web development','Telecommunications','German','Korean','Lahnda','Javanese','Bengali','Arabic','Spanish','Portugese','Hindi','Economics','Philosophy','Psycology','Literature','History','Law','Geography','Medicine','Biological sciences','Chemistry','Physics','Mathematics','Gender equality','LGBTQ+','Memes','Cats','Dogs','Investment','Travel','Environmental protection','Political debate']
-    }
-
-    this.handleFormSubmit = this.handleFormSubmit.bind(this);
-    this.handleClearForm = this.handleClearForm.bind(this);
-  }
-
-  handleFormSubmit(e) {
-      e.preventDefault();
-      let userData = this.state.newUser;
-
-      fetch('  ',{
-          method: "POST",
-          body: JSON.stringify(userData),
-          headers: {
-            'Accept': 'application/json',
-            'Content-Type': 'application/json'
-          },
-        }).then(response => {
-          response.json().then(data =>{
-            console.log("Successful" + data);
-          })
-      })
-    }
-
-    handleClearForm(e) {
-
-          e.preventDefault();
-          this.setState({
-            newUser: {
-              prefName: '',
-              yearOfStudy: [],
-              gender: [],
-              interest1: [],
-              interest2: [],
-              interest3: [],
-              interest4: [],
-              interest5: []
-            },
-          })
-      }
+    const interests = [
+      {label: "Athletics", value: 1},
+      {label: "Chess", value: 2},
+      {label: "Boxing", value: 3},
+      {label: "Martial arts", value: 4},
+      {label: "Ice Hockey", value: 5},
+      {label: "Rock Climbing", value: 6},
+      {label: "Ice skating", value: 7},
+      {label: "Hockey", value: 8},
+      {label: "Football", value: 9},
+      {label: "Rugby", value: 10},
+      {label: "Tennis", value: 11},
+      {label: "Cricket", value: 12},
+      {label: "Baseball", value: 13},
+      {label: "Table tennis", value: 14},
+      {label: "Acrobatics", value: 15},
+      {label: "Jazz", value: 16},
+      {label: "Pop", value: 17},
+      {label: "Techno", value: 18},
+      {label: "Indie", value: 19},
+      {label: "Sci-fi", value: 20},
+      {label: "Pottery", value: 21},
+      {label: "Sowing", value: 22},
+      {label: "Baking", value: 23},
+      {label: "Cooking", value: 24},
+      {label: "Yoga", value: 25},
+      {label: "Books", value: 26},
+      {label: "Rock", value: 27},
+      {label: "Trainspotting", value: 28},
+      {label: "PC gaming", value: 29},
+      {label: "Strategy", value: 30},
+      {label: "Bowling", value: 31},
+      {label: "Golf", value: 32},
+      {label: "Pool", value: 33},
+      {label: "Go", value: 34},
+      {label: "Card games", value: 35},
+      {label: "Toguz korgool", value: 36},
+      {label: "Pokemon", value: 37},
+      {label: "Console gaming", value: 38},
+      {label: "Photography", value: 39},
+      {label: "Fine art", value: 40},
+      {label: "Graphics", value: 41},
+      {label: "Dance", value: 42},
+      {label: "Filmography", value: 43},
+      {label: "Design", value: 44},
+      {label: "Fashion", value: 45},
+      {label: "Graphics", value: 46},
+      {label: "Dance", value: 47},
+      {label: "Filmography", value: 48},
+      {label: "Design", value: 49},
+      {label: "Fashion", value: 50},
+      {label: "Architecture", value: 51},
+      {label: "AI", value: 52},
+      {label: "Security", value: 53},
+      {label: "Software engineering", value: 54},
+      {label: "Electronic engineering", value: 55},
+      {label: "Fintech", value: 56},
+      {label: "Virtual reality", value: 57},
+      {label: "Marketing", value: 58},
+      {label: "Quantum computing", value: 59},
+      {label: "Digital transformation", value: 60},
+      {label: "Web development", value: 61},
+      {label: "Telecommunications", value: 62},
+      {label: "German", value: 63},
+      {label: "Korean", value: 64},
+      {label: "Lahnda", value: 65},
+      {label: "Javanese", value: 66},
+      {label: "Bengali", value: 67},
+      {label: "Arabic", value: 68},
+      {label: "Spanish", value: 69},
+      {label: "Portugese", value: 70},
+      {label: "Hindi", value: 71},
+      {label: "Economics", value: 72},
+      {label: "Philosophy", value: 73},
+      {label: "Psycology", value: 74},
+      {label: "Literature", value: 75},
+      {label: "History", value: 76},
+      {label: "Law", value: 77},
+      {label: "Geography", value: 78},
+      {label: "Medicine", value: 79},
+      {label: "Biological sciences", value: 80},
+      {label: "Chemistry", value: 81},
+      {label: "Physics", value: 82},
+      {label: "Mathematics", value: 83},
+      {label: "Gender equality", value: 84},
+      {label: "LGBTQ+", value: 85},
+      {label: "Memes", value: 86},
+      {label: "Cats", value: 87},
+      {label: "Dogs", value: 88},
+      {label: "Investment", value: 89},
+      {label: "Travel", value: 90},
+      {label: "Environmental protection", value: 91},
+      {label: "Political debate", value: 92},
+    ];
 
 /*form for students to input their interests*/
+class RegisterForm extends React.Component{
+  constructor(props){
+    super(props);
+    this.state = {
+      yearOfStudy: 'First',
+      gender: 'Male',
+      interest1: 'Athletics',
+      interest2: 'Pokemon',
+      interest3: 'AI',
+      interest4: 'Investment',
+      interest5: 'Travel',
+    };
 
-  render() {
-    return (
-      <div className="content">
+    this.handleInputChange = this.handleInputChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  handleInputChange(event){
+    const target = event.target;
+    const value = target.type === 'checkbox' ? target.checked: target.value;
+    const yearOfStudy = target.name;
+  }
+
+  handleSubmit(event){
+    event.preventDefault();
+  }
+
+    render(){
+      return(
+        <div className = "content">
         <Row>
-        {/*sets the column size for the card*/}
           <Col md={8} xs={12}>
             <Card className="card-user">
               <CardHeader>
                 <CardTitle></CardTitle>
               </CardHeader>
               <CardBody>
-                <form className = "container" onSubmit = {this.handleFormSubmit}>
+              <form onSubmit = {this.handleSubmit}>
                   <FormInputs
                     ncols={["col-md-5 pr-1"]}
                     proprieties={[
@@ -123,199 +200,78 @@ class RegisterForm extends React.Component {
                       }
                     ]}
                   />
+
                 {/*year of study*/}
-
-                {/*<FormGroup className="col-md-4">
-                    <Label for="inputState">Year of Study</Label>
-                    <Input type="select" name="select" id="inputState" >
-                    <option>Choose...</option>
-                    <option>First</option>
-                    <option>Second</option>
-                    <option>Third</option>
-                    <option>Fourth</option>
-                    <option>Freshers</option>
-                    </Input>
-                </FormGroup>*/}
-
-                <Select yearOfStudy = {'Year of study'}
-                    name = {'yearOfStudy'}
-                    options = {this.state.yearOfStudyOptions}
-                    value = {this.state.newUser.yearOfStudy}
-                    placeholder = {'Select your year of study'}
-                    handleChange = {this.handleInput}
-                />
+                <Label>
+                Year of Study
+                </Label>
+                <Select options = {yearOfStudy}/>
 
                 {/*gender*/}
-                                {/*}<FormGroup className="col-md-4">
-                    <Label for="inputState">Gender</Label>
-                    <Input type="select" name="select" id="inputState" >
-                    <option>Choose...</option>
-                    <option>Female</option>
-                    <option>Male</option>
-                    <option>Prefer not to say</option>
-                    </Input>
-                </FormGroup>
-                <FormGroup check>
-                <Label className="form-check-label">
-                    <Input className="form-check-input" type="checkbox" value=""/>
-                    Would you prefer a mentor of the same gender?
-                    <span className="form-check-sign">
-                    <span className="check"></span>
-                    </span>
+                <Label>
+                Gender
                 </Label>
-                </FormGroup>*/}
-              <Select title={'Gender'}
-                   name={'gender'}
-                   options = {this.state.genderOptions}
-                   value = {this.state.newUser.gender}
-                   placeholder = {'Select Gender'}
-                   handleChange = {this.handleInput}
-              />
+                <Select options = {gender}/>
 
-                <FormGroup>
-                    {/*user selects from dropdown list*/}
-                    <Label for="exampleSelect1">Interest 1</Label>
-                    <Input type="select" name="select" id="exampleSelect1">
-                    <option>Web Development</option>
-                    <option>AI/Machine Learning</option>
-                    <option>TV Show/Movie - Romance</option>
-                    <option>TV Show/Movie - Independent</option>
-                    <option>TV Show/Movie - Comedy</option>
-                    <option>TV Show/Movie - Horror</option>
-                    <option>TV Show/Movie - Sci-fi</option>
-                    <option>TV Show/Movie - Others</option>
-                    <option>Anime</option>
-                    <option>Sports - Martial Arts</option>
-                    <option>Sports - Football</option>
-                    <option>Sports - Yoga</option>
-                    <option>Sports - Others</option>
-                    <option>Music</option>
-                    <option>Theatre</option>
-                    <option>Video Games</option>
-                    <option>Travelling</option>
-                    <option>Reading</option>
-                    <option>Others</option>
-                    </Input>
-                </FormGroup>
-                <FormGroup>
-                {/*user selects from dropdown list*/}
-                    <Label for="exampleSelect1">Interest 2</Label>
-                    <Input type="select" name="select" id="exampleSelect1">
-                    <option>Web Development</option>
-                    <option>AI/Machine Learning</option>
-                    <option>TV Show/Movie - Romance</option>
-                    <option>TV Show/Movie - Independent</option>
-                    <option>TV Show/Movie - Comedy</option>
-                    <option>TV Show/Movie - Horror</option>
-                    <option>TV Show/Movie - Sci-fi</option>
-                    <option>TV Show/Movie - Others</option>
-                    <option>Anime</option>
-                    <option>Sports - Martial Arts</option>
-                    <option>Sports - Football</option>
-                    <option>Sports - Yoga</option>
-                    <option>Sports - Others</option>
-                    <option>Music</option>
-                    <option>Theatre</option>
-                    <option>Video Games</option>
-                    <option>Travelling</option>
-                    <option>Reading</option>
-                    <option>Others</option>
-                    </Input>
-                </FormGroup>
-                <FormGroup>
-                {/*user selects from dropdown list*/}
-                    <Label for="exampleSelect1">Interest 3</Label>
-                    <Input type="select" name="select" id="exampleSelect1">
-                    <option>Web Development</option>
-                    <option>AI/Machine Learning</option>
-                    <option>TV Show/Movie - Romance</option>
-                    <option>TV Show/Movie - Independent</option>
-                    <option>TV Show/Movie - Comedy</option>
-                    <option>TV Show/Movie - Horror</option>
-                    <option>TV Show/Movie - Sci-fi</option>
-                    <option>TV Show/Movie - Others</option>
-                    <option>Anime</option>
-                    <option>Sports - Martial Arts</option>
-                    <option>Sports - Football</option>
-                    <option>Sports - Yoga</option>
-                    <option>Sports - Others</option>
-                    <option>Music</option>
-                    <option>Theatre</option>
-                    <option>Video Games</option>
-                    <option>Travelling</option>
-                    <option>Reading</option>
-                    <option>Others</option>
-                    </Input>
-                </FormGroup>
-                <FormGroup>
-                {/*user selects from dropdown list*/}
-                    <Label for="exampleSelect1">Interest 4</Label>
-                    <Input type="select" name="select" id="exampleSelect1">
-                    <option>Web Development</option>
-                    <option>AI/Machine Learning</option>
-                    <option>TV Show/Movie - Romance</option>
-                    <option>TV Show/Movie - Independent</option>
-                    <option>TV Show/Movie - Comedy</option>
-                    <option>TV Show/Movie - Horror</option>
-                    <option>TV Show/Movie - Sci-fi</option>
-                    <option>TV Show/Movie - Others</option>
-                    <option>Anime</option>
-                    <option>Sports - Martial Arts</option>
-                    <option>Sports - Football</option>
-                    <option>Sports - Yoga</option>
-                    <option>Sports - Others</option>
-                    <option>Music</option>
-                    <option>Theatre</option>
-                    <option>Video Games</option>
-                    <option>Travelling</option>
-                    <option>Reading</option>
-                    <option>Others</option>
-                    </Input>
-                </FormGroup>
-                <FormGroup>
-                {/*user selects from dropdown list*/}
-                    <Label for="exampleSelect1">Interest 5</Label>
-                    <Input type="select" name="select" id="exampleSelect1">
-                    <option>Web Development</option>
-                    <option>AI/Machine Learning</option>
-                    <option>TV Show/Movie - Romance</option>
-                    <option>TV Show/Movie - Independent</option>
-                    <option>TV Show/Movie - Comedy</option>
-                    <option>TV Show/Movie - Horror</option>
-                    <option>TV Show/Movie - Sci-fi</option>
-                    <option>TV Show/Movie - Others</option>
-                    <option>Anime</option>
-                    <option>Sports - Martial Arts</option>
-                    <option>Sports - Football</option>
-                    <option>Sports - Yoga</option>
-                    <option>Sports - Others</option>
-                    <option>Music</option>
-                    <option>Theatre</option>
-                    <option>Video Games</option>
-                    <option>Travelling</option>
-                    <option>Reading</option>
-                    <option>Others</option>
-                    </Input>
-                </FormGroup>
-                <FormGroup>
-                    <Label for="exampleSelect1">Is there any reason you believe that you should receive special consideration?</Label>
-                    <Col>
-                        <Input type="text" placeholder=""/>
-                    </Col>
-                </FormGroup>
+                <Label>
+                Would you prefer a mentor of the same gender?
+                <input
+                  name = "sameGender"
+                  type = "checkbox"
+                  checked = {this.state.sameGender}
+                  onChange = {this.handleInputChange}/>
+                </Label>
+
+                <br></br>
+
+                {/*interest1*/}
+                <Label>
+                Interest 1
+                </Label>
+                <Select options = {interests}/>
+
+                {/*interest2*/}
+                <Label>
+                Interest 2
+                </Label>
+                <Select options = {interests}/>
+
+                {/*interest3*/}
+                <Label>
+                Interest 3
+                </Label>
+                <Select options = {interests}/>
+
+                {/*interest4*/}
+                <Label>
+                Interest 4
+                </Label>
+                <Select options = {interests}/>
+
+                {/*interest5*/}
+                <Label>
+                Interest 5
+                </Label>
+                <Select options = {interests}/>
+
+                {/*special consideration*/}
+                <Label>
+                Is there any reason you believe that you should receive special consideration?
+                  <input type = "text" value = {this.state.value} onChange = {this.handleChange}/>
+                </Label>
+
                   <Row>
                     <div className="update ml-auto mr-auto">
-                      <Button color="primary" round>Submit</Button>
+                    <Button color = "primary" round><input type = "submit" value = "Submit"/></Button>
                     </div>
                   </Row>
                 </form>
               </CardBody>
             </Card>
           </Col>
-        </Row>
+          </Row>
       </div>
     );
   }
 }
-
-export default RegisterForm;
+  export default RegisterForm;
