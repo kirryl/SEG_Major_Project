@@ -137,12 +137,22 @@ class RegisterForm extends React.Component{
 
   handleInputChange(event){
     const target = event.target;
-    const value = target.type === 'checkbox' ? target.checked: target.value;
-    const yearOfStudy = target.name;
+    const value = target.type === 'checkbox' ? target.checked : target.value;
+    const name = target.name;
+
+    this.setState({
+      [name]: value
+    });
   }
 
   handleSubmit(event){
     event.preventDefault();
+    const data = new FormData(event.target);
+
+    fetch('/api/form-submit-url', {
+    method: 'POST',
+    body: data,
+    });
   }
 
     render(){
@@ -151,11 +161,8 @@ class RegisterForm extends React.Component{
         <Row>
           <Col md={8} xs={12}>
             <Card className="card-user">
-              <CardHeader>
-                <CardTitle></CardTitle>
-              </CardHeader>
               <CardBody>
-              <form onSubmit = {this.handleSubmit}>
+              <form noValidate onSubmit = {this.handleSubmit}>
                   <FormInputs
                     ncols={["col-md-5 pr-1"]}
                     proprieties={[
@@ -205,13 +212,13 @@ class RegisterForm extends React.Component{
                 <Label>
                 Year of Study
                 </Label>
-                <Select options = {yearOfStudy}/>
+                <Select options = {yearOfStudy} name = "yearOfStudy" type = "number" value = {this.state.yearOfStudy} onChange = {this.handleInputChange}required/>
 
                 {/*gender*/}
                 <Label>
                 Gender
                 </Label>
-                <Select options = {gender}/>
+                <Select options = {gender} type = "number" onChange = {this.handleInputChange}required/>
 
                 <Label>
                 Would you prefer a mentor of the same gender?
@@ -228,7 +235,7 @@ class RegisterForm extends React.Component{
                 <Label>
                 Interest 1
                 </Label>
-                <Select options = {interests}/>
+                <Select options = {interests} required/>
 
                 {/*interest2*/}
                 <Label>
